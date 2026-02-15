@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library SYSTEM "library.dtd">
+<library>
+    <book id="A78Z" available="no" language="es" format="ebook">
+        <title>Han cantado bingo</title>
+        <author>
+            <firstname>Lana</firstname>
+            <lastname>Corujo</lastname>
+        </author>
+
+        <publication>
+            <publisher>asdf</publisher>
+            <year>2025</year>
+        </publication>
+        <isbn>asdf</isbn>
+        <price>987</price>
+    </book>
+</library>

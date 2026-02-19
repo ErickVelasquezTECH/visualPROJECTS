@@ -1,0 +1,13 @@
+<!ELEMENT concesionario (coche+)>
+<!ELEMENT coche (marca, modelo, año, kilometros, precio, extras?)>
+<!ELEMENT marca (#PCDATA)> <!-- Es obligatoria-->
+<!ELEMENT modelo (#PCDATA)> <!-- Es obligatoria-->
+<!ELEMENT año (#PCDATA)>
+<!ELEMENT kilometros (#PCDATA)> <!-- No se puede poner condicion de entero-->
+<!ELEMENT precio (#PCDATA)> <!-- No se puede especificar decimal de positivo-->
+<!ELEMENT extras (extra*)>
+<!ELEMENT extra (#PCDATA)>
+
+<!ATTLIST concesionario nombre CDATA #REQUIRED>
+<!ATTLIST coche matricula CDATA #REQUIRED> <!-- No se puede especificar el patron-->
+<!ATTLIST extra precio CDATA #REQUIRED> 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Crea coches.dtd y coches.xsd para que se valide el siguiente XML.
+En DTD deberás cumplir las restricciones abajo indicadas en cuanto a obligatoriedad de elementos, número de veces que aparecen o los que tienen un listado de posibles valores.
+
+RESTRICCIONES PARA EL XSD (y DTD):
+- Raíz: concesionario
+- Atributo nombre obligatorio
+- Coches: mínimo 1, sin máximo
+- Cada coche:
+  - Atributo matrícula único (patrón: 4 números y 3 letras mayúsculas)
+  - Marca obligatoria
+  - Modelo obligatorio
+  - Año (1990-2024)
+  - Kilómetros (entero >=0)
+  - Precio (decimal positivo)
+  - Extras opcionales (0-5 elementos con atributo precio)
+-->
+<concesionario xmlns="https://erick.es"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="https://erick.es coches.xsd"
+                nombre="Autos Madrid">
+    <coche matricula="1234ABC">
+        <marca>Seat</marca>
+        <modelo>Ibiza</modelo>
+        <año>2020</año>
+        <kilometros>25000</kilometros>
+        <precio>14500.50</precio>
+        <extras>
+            <extra precio="450">Climatizador</extra>
+            <extra precio="300">Sensor de aparcamiento</extra>
+        </extras>
+    </coche>
+</concesionario>

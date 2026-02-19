@@ -1,0 +1,10 @@
+<!ELEMENT grades (student+)>
+<!ELEMENT student (name, average, subjects)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT average (#PCDATA)>
+<!ELEMENT subjects (subject+)>
+<!ELEMENT subject (name-subject, code, grade)>
+<!ELEMENT name-subject (#PCDATA)>
+<!ELEMENT code (#PCDATA)>
+<!ELEMENT grade (#PCDATA)>
+<!ATTLIST student id ID #REQUIRED>

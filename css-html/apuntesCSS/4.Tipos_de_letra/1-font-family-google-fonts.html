@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .family-generic{
+            font-family:Verdana, Geneva, Tahoma, sans-serif; /*Es la version estandar automatica
+            Podemos ordenarlas de forma que si no tiene la primera, cogera la segunda y asi sucesivamente*/
+        }
+        @font-face{
+            font-family: 'Rubik';
+            src: url('./fonts/RubikGemstones-Regular.ttf') format('truetype'); 
+            /*el formato ttf es truetype*/
+        }
+        .font-face{
+            font-family: "Rubik";
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');        
+        .import{
+            font-family: "Ubuntu Sans Mono", serif;
+        } /*Todas estas instrucciones estan dentro de code @import de google fonts al elegir el tipo*/
+        
+    </style>
+</head>
+<body>
+    <p class="family-generic">Este parrafo tiene una familia de letras</p>
+    <p class="font-face">Este parrafo tiene un tipo de letra descargado</p>
+    <p class="import">Este parrafo tiene un tipo de letra de una web</p>
+</body>
+</html>

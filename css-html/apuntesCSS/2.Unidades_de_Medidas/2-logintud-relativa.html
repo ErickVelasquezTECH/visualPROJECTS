@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 16px;
+        }
+        .rem{
+            font-size: 1rem; /*Tomara como referencia al font raiz (HTML) que es 16px*/
+            margin-left: 2rem; /*sera 16px *2*/
+        }
+        .em{
+            font-size: 1rem; 
+            margin-left: 2em; /*Tomara como referencia al padre de su elemento que es 1rem (que sera
+            a su vez 16px de html) es decir que se va heredando y asi sucesivamente*/
+        }
+        /*viewport 1200x800px*/
+        .vw{
+            font-size: 5vw; /*Ancho del viewport:
+            Si el viewport mide 1200px de ancho:
+            50vw = 600px (50% de 1200px)
+            10vw = 120px  */
+        }
+        .vh{
+            font-size: 10vh; /*Alto del viewport:
+            Si el viewport mide 800px de alto:
+            100vh = 800px
+            25vh = 200px */
+        }
+        .vmin{
+            font-size: 10vmin ; /*1% del lado más pequeño del viewport
+            Si viewport es 1200x800px → 10vmin = 80px (10% de 800px)*/
+        }
+        .vmax{
+            font-size: 10vmax ; /* 1% del lado más grande del viewport
+            Si viewport es 1200x800px → 10vmax = 120px (10% de 1200px)*/
+        }
+        .parent-element{
+            font-size: 100px
+        } /*El% heredara del elemento padre, es decir el 50% de 100px*/
+        .child-element{
+            font-size: 50%;
+        }
+    </style>
+</head>
+<body>
+    <p class="rem">Tiene aplicado rem</p>
+    <p class="em">Tiene aplicado em</p>
+    <p class="vw">Tiene vw</p>
+    <p class="vh">Tiene hw</p>
+    <p class="vmin">Tiene vmin</p>
+    <p class="vmax">Tiene vmax</p>
+    <div class="parent-element">Elemento padre
+        <div class="child-element">Elemento hijo</div>
+    </div>
+</body>
+</html>

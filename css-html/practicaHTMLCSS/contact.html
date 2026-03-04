@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palestina Libre</title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+
+<body>
+    <!--Encabezado de mi pagina-->
+    <header id="header-pagina">
+        <h1>PALESTINA LIBRE - Ayuda humanitaria</h1>
+        <nav class="enlaces">
+            <!--Invocamos el "indice" de mi pagina-->
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="content.html">Contenido</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Cuerpo de mi pagina-->
+    <main id="main-formulario">
+        <h2 class="titulo-pagina-formulario">Formulario de colaboración humanitaria</h2>
+        <p>Si deseas ser parte de proyectos de ayuda humanitaria para gaza, tanto como de forma voluntaria o donante, no
+            dudes en rellenar este formulario.</p>
+        <!--Creamos un formulario para voluntariado o donante-->
+        <form action="#" method="get">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required minlength="2"
+                    maxlength="50" pattern="^[A-Z][a-z]{1,49}$">
+                <br><br>
+                <label for="email">Correo electrónico*:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="edad">Edad <strong>(Minimo 18*)</strong>:</label>
+                <input type="number" id="edad" name="edad" min="18" max="80">
+                <br><br>
+                <label for="telefono">Telefono:</label>
+                <input type="text" id="telefono" name="telefono" pattern="[0-9]{9}">
+                <br><br>
+                <label for="web">Página web/perfil social:</label>
+                <input type="url" id="web" name="web">
+                <br><br>
+                <label for="fecha">Fecha disponible:</label>
+                <input type="date" id="fecha" name="fecha">
+                <br><br>
+                <label for="archivo">Documento informativo sobre Palestina (PDF) (opcional):</label>
+                <input type="file" id="archivo" name="archivo" accept=".pdf">
+                <br><br>
+            </fieldset>
+            <!--Otro formulario con interacciones de marcado-->
+            <fieldset>
+                <legend>Colaboración</legend>
+                <p>Tipo de colaboración:</p>
+                <div>
+                    <input type="radio" id="donante" name="colaboracion" value="donante" required>
+                    <label for="donante">Donante</label>
+                    <input type="radio" id="voluntario" name="colaboracion" value="voluntario">
+                    <label for="voluntario">Voluntario</label>
+                    <input type="radio" id="promotor" name="colaboracion" value="promotor">
+                    <label for="promotor">Promotor de campañas</label>
+                </div><br><br>
+
+                <p>Áreas en las que te gustaría ayudar:</p>
+                <div>
+                    <input type="checkbox" id="medica" name="area" value="medica">
+                    <label for="medica">Salud</label>
+                    <input type="checkbox" id="educacion" name="area" value="educacion">
+                    <label for="educacion">Educación</label>
+                    <input type="checkbox" id="logistica" name="area" value="logistica">
+                    <label for="logistica">Logística</label>
+                </div><br><br>
+                <!--Formulario de seleccion-->
+                <label for="pais">Selecciona tu país:</label>
+                <select id="pais" name="pais">
+                    <option value="espana">España</option>
+                    <option value="palestina">Palestina</option>
+                    <option value="mexico">Perú</option>
+                    <option value="chile">Chile</option>
+                    <option value="otro">Otro</option>
+                </select><br><br>
+
+                <label for="roles">Roles disponibles:</label>
+                <select id="roles" name="roles" multiple size="5">
+                    <optgroup label="Presencialmente">
+                        <option value="medico">Médico</option>
+                        <option value="psicologo">Psicólogo</option>
+                        <option value="educador">Educador</option>
+                    </optgroup>
+                    <optgroup label="Apoyo remoto">
+                        <option value="traductor">Traductor</option>
+                        <option value="comunicador">Comunicador</option>
+                        <option value="analista">Analista</option>
+                        <option value="diseñador">Diseñador</option>
+                    </optgroup>
+                </select><br><br>
+
+                <label for="comentarios">Comentarios:</label> <br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="40"
+                    placeholder="Algo que deseas contarnos o que mejoremos"></textarea>
+                <br><br>
+            </fieldset>
+            <fieldset>
+                <!--Un ultimo formulario para que el usuario me de su opinion-->
+                <legend>Opinion</legend>
+                <p>Sobre el formulario:</p>
+                <label for="valoracion">¿Que te ha parecido el formulario?: (1-10)</label>
+                <input type="range" name="valoracion" id="valoracion">
+                <br><br>
+                <label for="color">¿Que color te gustaria la pagina?: </label>
+                <input type="color" name="color" id="color">
+            </fieldset>
+            <div><!--Botones de enviar y reseteo-->
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar todo">
+            </div>
+        </form>
+    </main>
+    <!--Pie de pagina-->
+    <footer>
+        <!--Pie de pagina con enlaces que se repetiran en todas las paginas, incluye lo del copyright-->
+        <p class="copyright">
+            <small>© 2025 Palestina Libre - Proyecto Humanitario.</small>
+        </p>
+        <div class="end-links">
+            <p>
+                <small>
+                    <a href="https://www.unrwa.org/">UNRWA (Agencia de las Naciones Unidas para los Refugiados de
+                        Palestina
+                        en Oriente Próximo)</a>|
+                    <a href="mailto:palestina@ayuda.org">Correo</a>|
+                    <a href="#header-pagina">Volver arriba</a>
+                </small>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

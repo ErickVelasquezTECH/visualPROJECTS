@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="books-to-html.xsl" type="text/xsl"?>
+<library>
+    <book>
+        <title>Nuestra parte de noche</title>
+        <author nationality="Argentina">Mariana Enríquez</author>
+        <year>2019</year>
+        <pages>672</pages>
+        <description>Un padre y un hijo atraviesan Argentina por carretera, desde Buenos Aires hacia las cataratas de Iguazú, en la frontera norte con Brasil.</description>
+        <links>
+            <link>https://www.goodreads.com/book/show/48758708</link>
+        </links>
+    </book>
+    <book>
+        <title>Las malas</title>
+        <author>Camila Sosa Villada</author>
+        <year>2019</year>
+        <pages>224</pages>
+        <description>Cuando llegó a Córdoba capital para estudiar en la universidad, Camila Sosa Villada fue una noche, muerta de miedo, a espiar a las travestis del Parque Sarmiento y encontró su primer lugar de pertenencia en el mundo.</description>
+        <links>
+            <link>https://www.goodreads.com/book/show/44438256</link>
+            <link>https://www.todostuslibros.com/libros/las-malas_978-84-9066-806-1</link>
+        </links>
+    </book>
+    <book>
+        <title>Las mala costumbre</title>
+        <author nationality="España">Alana S. Portero</author>
+        <year>2023</year>
+        <pages>252</pages>
+        <description>Narrada desde una singular y desgarradora voz en primera persona, La mala costumbre recorre la adolescencia de una niña atrapada en un cuerpo que no sabe habitar, que intenta comprenderse a sí misma y al mundo en el que vive.</description>
+        <links>
+            <link>https://www.goodreads.com/book/show/123723946</link>
+            <link>https://www.todostuslibros.com/libros/la-mala-costumbre_978-84-322-4212-0</link>
+        </links>
+    </book>
+</library>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color: aqua; /*Selector de todo en general*/
+        }
+        .normal-container {
+            border: 1px solid #ddd; 
+        }
+        .container-inside *{
+            border: 1px solid #ff0000; /*Seria la forma de seleccionar a todos los elementos
+            dentro. IMPORTANTE*/
+
+        }
+    </style>
+</head>
+<body>
+    <div>Estilo general</div>
+    <div class="normal-container">
+        <p>Selector</p>
+        <p>Normal</p>
+    </div>
+
+    <div class="container-inside">
+        <p>Selector1</p>
+        <p>Selector2</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type]{
+            border-color: blue;    /*Todos los elementos que tienen el atributo type*/
+        }
+        label[for="name"]{
+            color: aqua;   /*Todos los elementos que tengan EXACTAMENTE este atributo y valor*/
+        }
+        label[for*="name12"]{
+            color: brown;   /*Todos los elementos que contengan el valor, se usa el (*) */
+        }
+
+        label[for^="123"]{
+            color: violet; /*Todos lo que empiezen con el valor (^) */
+        }
+        label[for$="123"]{
+            color: green;  /*Todos los que terminan con el valor ($)  */
+        }
+
+        /*Algunos atributos que se pueden usar por ejemplo son:
+            - href
+            - target */
+            
+    </style>
+</head>
+<body>
+    <label for="name">Nombre</label>
+    <input type="text" name="name"><br>
+
+    <label for="12name12">Contiene un valor</label><br>
+    <label for="123name">Empieza con el valor</label><br>
+    <label for="name123">Termina con el valor</label>
+
+</body>
+</html>

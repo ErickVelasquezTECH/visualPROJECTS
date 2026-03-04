@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1, h2{
+            color: aqua;   /*Esto es un selector combinado, puedes combiar muchas*/ 
+        }
+        div p em{
+            background-color: red;
+            /*Este es un selector de forma descendente, solo funciona si es hijo o nieto y asi...*/
+        }
+        container > p{
+            color: blue;  /*Solo al hijo o hijos directoS*/
+        }
+
+        div+h1{
+            color: blue;  /*Hijo inmediato, pero solo si estan separados y fuera*/
+        }
+        div ~ text{
+            background-color: blanchedalmond;  /*Todos sus hermanos que van despues
+            de él, tiene que estar separados y no el uno dentro de otro*/
+        }
+
+    </style>
+</head>
+<body>
+    <h1>SELECTOR</h1>
+    <h2>COMBINADO</h2>
+
+    <div>
+        <p>Este es descendente de div
+            <em>HOLA</em>
+        </p>
+    </div>
+    <p>Este no</p>
+
+    <container>
+       <p>Es el parrafo 1</p>
+       <div>
+            <p>Este no</p>
+       </div>
+    </container>
+
+    <div>
+        <h1>Yo soy el hijo de inmediato</h1>   <!--Esto no se aplicara como inmediato,
+        Seran los dos h1 que estan dentro, solo funciona si estan fuera el + -->
+        <h1>Yo no</h1>
+    </div>
+    
+
+    <div>Despues de mi</div>
+    <h1>Si estas tu</h1>    <!--ESTO SI FUNCIONA COMO INMEDIATO-->
+    <h1>Yo no</h1>
+
+    <div>Mis hermanos</div>
+    <text>Hola</text>
+    <text>Hermano</text>
+    
+</body>
+</html>

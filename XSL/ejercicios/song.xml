@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="song-to-html.xsl" type="text/xsl"?>
+<songs>
+    <song>
+        <title>Bohemian Rhapsody</title>
+        <artist>Queen</artist>
+        <year>1975</year>
+    </song>
+    <song>
+        <title>Imagine</title>
+        <artist>John Lennon</artist>
+        <year>1971</year>
+    </song>
+    <song>
+        <title>Billie Jean</title>
+        <artist>Michael Jackson</artist>
+        <year>1983</year>
+    </song>
+</songs>
+
+<!-- 
+Requisitos:
+- Generar un HTML con un título "Mis songes favoritas"
+- Mostrar una lista no ordenada (<ul>) con todas las songes
+- Cada elemento debe mostrar: "Título (year) - artist". OJO: Tienes que utilizar la función concat() para ello.
+- Ordenar las songes por year (de más antigua a más reciente)
+-->

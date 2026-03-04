@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hover:hover{
+            background-color: aqua;   /*Se activa cuando pasas el raton*/
+        }
+        .focus:focus{
+            background-color: blue; /*Se activa cuando tiene el foco es decir:
+            Al hacer click sobre el se activa, pero por dentro se queda seleccionado.
+            Hasta que no hagas click en otra parte no se ira*/
+        }
+        .active:active{
+            background-color: blueviolet; /*Se activa cuando haces click, cuando lo sueltas
+            se va, es de efecto rapido*/
+        }
+        a:visited{
+            color: red;   /*Se activa cuando visitas un enlace, es importante tener en cuenta
+            el caché, si visitas ya paginas que visitaste se activara de por si*/
+        }
+        li:first-child{
+            color: blue;  
+            /*Buscara al primer li de todos los contenedores, en este caso solo a ul.
+            Si pusieramos mas contenedores que tengan un li o mas, se aplicara tambien a ese primero*/
+        }
+        li:last-child{
+            color: bisque;
+            /*Lo mismo pero al ultimo de cada contenedor*/
+        }
+
+        /*Es importante entender que fist y last child no indican que sera el primer li
+        que encuentren, sino que li hijo de cada contenedor, de forma general*/
+    </style>
+</head>
+<body>
+    <button class="hover">Pasa el raton</button><br>
+
+    <button class="focus">Tiene el foco</button><br>
+
+    <button class="active">Mientras se hace click</button><br>
+
+    <a href="https://www.google.com/">Google</a><br>
+    
+    <ul>
+        <li>Primero</li>
+        <li>Segundo</li>
+        <li>Tercero</li>
+    </ul>
+</body>
+</html>

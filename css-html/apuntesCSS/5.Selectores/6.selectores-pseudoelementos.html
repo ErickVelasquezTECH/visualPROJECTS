@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        em::before{
+            content: "<<"; /*Contenido antes del elemento*/
+        }
+        em::after{
+            content: ">>"; /*Despues del elemento*/
+        }
+        p::first-letter{
+            color: brown; /*Primera letra del elemento*/
+        }
+        p::first-line{
+            color: aqua;  /*Ultima letra del elemento*/
+        }
+        p::selection{
+            background-color: yellow;  /*Es cuando seleccionas con el mouse un texto*/
+        }
+
+    </style>    
+</head>
+<body>
+    <p>Este es un <em>parrafo</em> lleno de texto</p>
+    
+</body>
+</html>

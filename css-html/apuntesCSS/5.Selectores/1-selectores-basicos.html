@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+          color: aqua;  /*En un video de midudev, se indico que usar solo
+          selector de elemento directo es mala practica*/
+        }
+        .class{
+            color: blue; /*Esto seria lo mejor */
+        }
+        .class2{
+            background-color: aqua; /*Es posible añadir varios estilos a un mismo elemento
+            solo ponemos el nombre de la clase separada en espacio*/
+        }
+        #identifier{
+            color: blueviolet;  /*El ID debe ser unico en toda la pagina*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Elemento</h1>
+    <div class="class">Selector de clases</div>
+    <div class="class class2">Selector de varias clases</div>
+    <div id="identifier">Selector unico</div>
+</body>
+</html>

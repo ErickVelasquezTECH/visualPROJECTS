@@ -1,0 +1,877 @@
+/*Primero importamos las tipografias que usaremos en nuestras 3 paginas*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+/*Introducimos el reset para las pagina :D, siempre*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*------------------->ESTILOS: GENERAL<-------------------*/
+/*Ahora agregamos los estilos que se aplicaran de forma general para toda mi pagina, es decir el index, content y contact*/
+/*Quiero aclarar que esto lo puse cuando ya habia terminado mi codigo por completo, solo que note que habian estilos
+ que se repetian y senti que era mejor moverlos al principio de mi codigo para señarlos que seran en general para mis 3 paginas*/
+
+body{
+    line-height: 1.8;
+    color: #333;
+}
+main{
+    font-family: "Rethink Sans"; /*Aplicare una tipografia exclusivamente para mi main*/
+    max-width: 2000px;
+    margin: 0px auto; /*Esto me permite centrarlo todo dentro de main*/ 
+}
+section{
+    margin-bottom: 10rem;
+}
+a{/*Estilos a todos los enlaces*/ 
+    text-decoration: none;
+    color: rgb(0, 255, 255);
+}
+ul,dd{/*Estilos a todos las listas desordenadas y conceptos*/
+    margin: 15px 0px;
+    padding-left: 30px;
+    line-height: 1.8;
+}
+li{/*Estilos a cada punto de la lista*/
+    margin-bottom: 10px;
+}
+h2{
+    color: #062c52;
+    border-bottom: 3px solid #001c71;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-size: 2.1rem;
+}
+
+h2::after {/*Es un estilo que se pondra despues de cada h2*/
+    content: " 🇵🇸";/*Este emoji lo encontre en: https://emojipedia.org/es/bandera-territorios-palestinos*/
+    font-size: 1.5rem;
+}
+h3{
+    color: #1a3b5c;
+    margin: 20px 0px 15px 0px;
+    font-size: 1.6rem;
+}
+.main-articulos article p:first-of-type::first-letter {/*Estilo para la primera letra de cada parrado de cada articulo*/
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+
+}
+mark{
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+strong{
+    color: #0066cc;
+}
+li:hover{/*Estilo al pasar el mouse sobre el punto de cada lista*/
+    font-weight: bold;
+}
+::selection {/*Estilo al seleccionar algo con el mouse :D*/
+    background-color: #01407f;
+    color: white;
+}
+
+
+
+/*--------------->ESTILOS: HEADER Y FOOTER DE TODAS MIS PAGINAS<----------------*/
+
+/*----->Estilos: HEADER<-----*/
+#header-pagina{ 
+    font-family: "Josefin Sans"; /*Se aplicara una fuente exclusiva para el encabezado de mi pagina que es header*/
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    box-shadow: 0px 0.5px 10px rgb(0, 83, 15);
+    padding: 30px 60px;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+#header-pagina h1{/*Estilo para el titulo de mi header*/
+    text-shadow: 1px 1px 1px rgba(0, 251, 255, 0.599);
+    font-size: 3.1rem;
+    padding-left: 50px;
+}
+#header-pagina h1::before{/*Estilo para agregar un digito antes de mi titulo*/
+    content: "🇵🇸";
+}
+
+/*------->ESTILOS: LISTA DE ENLACES DE HEADER<---------- */
+nav{
+    padding: 30px 40px;
+    background-color: black;
+    
+    
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    list-style: none;
+}
+nav li:nth-child(3){/*Estilo a solamente el tercer punto de cada lista*/
+    border-left: 3px solid #0151a1;
+    padding-left: 10px;
+}
+.enlaces a{ /*Estilo a los enlaces de mi header */
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+
+.enlaces li:hover{/*Estilo al pasar mouse sobre mis puntos de mi lista que tengo en mi header*/
+    transform: scale(1.1); /*Esta propiedad realiza como un movimiento a escala (se agrandara un poco)*/
+}
+.enlaces a:hover{ /*Estilo al pasar el mouse sobre los enlaces de mi header*/
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+/*Estilos: FOOTER Y ENLACES DE MI FOOTER*/
+footer{
+    background-color: black;
+    color: white;
+}
+.copyright{
+    font-size: 1.8rem;
+    font-style: italic;
+}
+.end-links{
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+.end-links a{/*Estilo a los enlaces de mi footer*/
+    color: rgb(0, 255, 255);
+}
+footer .end-links a:visited{/*Estilo al visitar los enlaces de mi footer*/
+    color: #d429ff;
+}
+footer .end-links a:active{/*Estilo al mantener el click en mis enlaces del footer*/
+    color: #ff0000;
+    font-weight: bold;
+}
+
+
+
+
+
+/*----------------------->ESTILOS PARA INDEX.HTML<---------------------*/
+
+
+/*------->ESTILOS: PRIMER CONTENEDOR DE MI PAGINA PRINCIPAL CON TITULO E IMAGEN<--------*/
+.titulo-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 60px 0px;
+    background-image: url(/assets/images/palestina-banner.jpg); /*Introduje una imagen que sera la presentacion de mi index*/
+    background-position: center;
+    background-size: cover;
+    height: 50rem;
+}
+.titulo-principal h2{
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    border: 0px;
+    text-shadow: 0.5px 0.5px 2px black,  
+    0.1px 0.1px 5px black;
+}
+/*ESTILOS: ARTICULOS PRINCIPALES DE MI PAGINA*/
+.main-articulos{
+    margin: 0px 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+.main-articulos article{
+    width: 800px;
+    box-shadow: 0px 5px 15px rgba(0, 122, 61, 0.1);
+    border-top: 5px solid #000000;
+    border-left: 5px solid #007a3d;
+    border-radius: 16px;
+    padding: 40px;
+    
+}
+
+.main-articulos article:hover{/*Estilo al pasar el mouse sobre los articulos del contenedor main articulos*/
+    transform: translateY(-8px); /*Esta propiedad sirve para mover en direccion Y :D*/
+    border-top: 5px solid #ce1126; 
+    box-shadow: 0px 10px 25px rgba(34, 192, 31, 0.32);
+}
+h3 ~ p {/*Estilo a todos los "P" que siguen despues de un "H3*/
+    font-size: 1.4rem;
+}
+
+/*------------->ESTILOS: SEGUNDO CONTENEDOR DE MI MAIN*<------------*/
+
+main>div{/*Aplico estilo al div que sigue inmediatamente de mi main*/
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem ;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+/*--->ESTILOS: CONTENEDOR DE AYUDA Y CONCEPTOS<--*/
+main>div>div{/*Estilo para el div inmediato despues del div del main*/
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px rgba(124, 124, 124, 0.605),
+    -1px -1px 1px rgba(106, 106, 106, 0.772);
+    border-left: 5px solid #0c6bc9; 
+    border-radius: 20px;
+    padding: 30px 40px;    
+    font-size: 1.6rem;
+}
+main>div>div:hover{/*Estilo al pasar el mouse sobre mi contenedor del div */
+        box-shadow: 0px 1px 10px #0c6bc9;
+
+}
+/*-------->ESTILOS: ARTICULO DE AYUDA<---------*/
+.ayuda{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   margin-bottom: 25px;
+}
+.ayuda ol{/*Estilo a la lista ordenada de ayuda*/
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.ayuda li{
+    border: 2px solid #e0e0e0;
+    border-left: 5px solid #0c6bc9;    
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    
+}
+.ayuda li:hover{/*Aplicamos estilo al pasar el mouse sobre mi lista del articulo ayuda*/
+    background-color: #a6d3ff6b;
+    border-color: #0c6bc9;}
+   
+/*-------->ESTILOS: ARTICULO DE CONCEPTOS<-------*/
+.conceptos{
+border: 2px solid #e0eeff;
+    border-left: 5px solid #0c6bc9;
+    border-radius: 10px;
+    padding: 10px 20px ;
+    box-shadow: 0 4px 8px rgba(14, 123, 232, 0.08);
+}
+.conceptos:hover{/*Estilos al pasar el mouse sobre el contenedor conceptos*/
+    transform: scale(1.01);
+    background-color: #a6d3ff6b;
+    border-color: #0c6bc9;
+}
+/*Estilo a los conceptos*/
+.conceptos dt{/*Aplicamos estilo al nombre de mi concepto*/
+    color: #0c6bc9;
+    font-weight: bold;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #c1ddff;
+    padding-bottom: 5px;
+}
+
+.conceptos dd{/*Aplicamos estilo a la definicion de mi concepto*/
+    font-size: 1.4rem;
+    margin-left: 20px;
+    padding: 8px 15px;
+    background-color: rgba(12, 106, 201, 0.18);
+    border-radius: 8px;
+    border-left: 3px solid rgba(12, 107, 201, 0.3);
+}
+
+
+/*---------->ESTILOS: ASIDE (BARRA LATERAL DE MI PAGINA)<----------*/
+
+.barra-lateral{/*Aplicamos estilo al aside, este se encuentra a la derecha como una barra lateral, 
+    esto gracias al flex que pusimos al contenedor (main>div)*/
+    width: 500px;
+    border-left: 5px solid red;
+    border-radius: 20px;
+    padding: 30px 40px 30px 50px;
+    font-size: 1.4rem;
+}
+.barra-lateral:hover{/*Estilos al pasar el mouse sobre mi aside*/
+    box-shadow: 0px 1px 10px rgba(251, 71, 71, 0.968);
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------->ESTILOS PARA MI CONTENT.HTML<-------------------*/
+
+
+#main-contenido>section:first-child{ /*Aplico estilo al primer hijo de main que sera section*/
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*--------------->ESTILOS: TABLA<---------*/
+table{
+    width: 100%;
+    margin: 35px 0px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 1.1rem;
+    border-collapse: collapse;
+    color: rgb(44, 42, 42);
+}
+caption{ /*Estilo al titulo de mi tabla */
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #007a3d;
+}
+th{
+    background-color: #007a3d; 
+    color: white; 
+    padding: 16px 14px;
+    text-align: left;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+th:last-child{/*Estilo al ultimo hijo de mi th, es decir a la ultima cabecera de mi tabla*/
+    border-right: none;
+}
+tbody tr:nth-child(even){/*Aplica a todas las filas que son pares*/
+    background-color: #f2f2f2;
+}
+tbody tr:nth-child(odd){/*Aplica a todas las filas que son impares*/
+    background-color: white;
+}
+tbody tr:hover{/*Estilo al pasar el mouse sobre mis filas de la tabla*/
+    background-color: rgba(206, 17, 38, 0.1); 
+}
+tbody tr:nth-child(n+3) td:first-child{
+    /*Este estilo aplica solamente a las filas que son desde tercero hacia adelante, y 
+    continuara hasta el hijo td que tiene*/
+    font-weight: bold;
+}
+td{
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+tfoot td{
+    background-color: #000000; 
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+
+/*---->ESTILOS: GALERIA DE IMAGENES<----*/
+
+.section-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0px;
+    padding: 20px;
+}
+figure{
+    flex: 1 1 300px;
+    max-width: 400px;
+    border-radius: 12px;
+    overflow: hidden; /*Esto nos ayuda a que si la imagen se sale de su cuadro, lo recorte*/
+    box-shadow: 0px 8px 20px rgba(78, 78, 78, 0.15);
+    background: white;
+}
+figure:hover{ /*Estilo al pasar el mouse sobre el figure que es como el contenedor
+    en donde se encuentra mi imagen y su descripcion*/
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(94, 92, 92, 0.438);
+}
+img{
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #364d63df;
+}
+img:hover{ /*Estilo al pasar el mouse sobre la imagen*/
+    transform: scale(1.1);
+}
+figcaption{ /*Estilo a la descripcion o titulo de mi imagen*/
+    text-align: center;
+    font-style: italic;
+    padding: 15px;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/*---->ESTILOS: SECCION DE VIDEO<-----*/
+
+.section-video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0px;
+}
+video{ /*Añadimos estilo y definimos el tamaño de mi caja de video*/
+    width: 800px; 
+    height: 450px; 
+    margin: 20px 0px;
+    border: 10px solid #364d63;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(29, 29, 29, 0.452);
+}
+
+/*-->ESTILOS: SECCION DE ARCHIVOS (YOUTUBE y pdf) <----*/
+
+.section-archivos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 20px;
+}
+
+.section-archivos h2, iframe{
+    flex: 1 1 400px;
+    min-height: 300px;
+}
+iframe{ /*Aqui realizamos estilos y tamaño para las cajas que contiene YT y pdf*/
+    margin: 20px 0px;
+    border: 10px solid #364d63;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(29, 29, 29, 0.452);
+}
+
+
+
+
+
+
+
+
+/*------------------>ESTILOS PARA MI CONTACT.HTML<---------------------*/
+
+
+#main-formulario>h2, #main-formulario>p{ /*Aplico algunos margenes para h2 y p que estan a principio de main*/
+    margin: 20px 20px;
+}
+/*------>ESTILOS: FORMULARIO GENERAL<-----*/
+form{
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(120deg, 
+    #f8f9fa 0%, 
+    #e9ecef 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(43, 43, 43, 0.2);
+}
+fieldset{
+    background: white;
+    border: 2px solid #22313f;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+fieldset:hover{/*Estilos al pasar el mouse sobre mis cajas de formulario*/
+    border-color: #016dd9;
+}
+label{
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+legend{
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+/*Aplicamos estilos a ciertos apartados de mi formulario, para este caso en concreto utilice los selectores de atributo*/
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+input[type="date"],
+select,
+textarea{
+    width: 100%;
+    max-width: 500px;    
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #0000008b;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #ffe83d74;
+}
+input[type$="l"]{/*Aplicamos estilo a todos los inputs que terminen en "l"*/
+    background-color: rgba(174, 255, 178, 0.914);
+}
+
+input[type="file"]{ /*Estilos solamente para el input file*/
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px dashed #6767678b;  
+    border-radius: 8px;
+    background: #2bff00b3;     
+}
+
+fieldset > p + div{/*Estilos al div que es hermano de un p*/
+    /*Esto lo utilizo para darle estilos a mi tercer fieldset de mi formulario, puesto que es el 
+    unico que tiene un div que es hermano de p*/ 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+fieldset > p + div label{ /*Aplica estilos a los label del contenedor div*/
+    padding: 10px 15px;
+    border: 2px dotted #0000008b; 
+    background: #00e1ff65;
+    border-radius: 8px;
+}
+fieldset > p + div label:hover{/*Aplico estilos al pasar el mouse
+    sobre el label de mi contenedor div*/
+    background: #00e1fff8;
+    transform: scale(1.1);
+}
+input[type*="e"]{ /*Estilo para los inputs que tienen una "e" en su valor*/
+    border-width: 2px;
+}
+select[size]{/*Aqui aplicaria estilo a los elementos que tiene atributo size*/
+    height: 150px;
+    padding: 10px;
+}
+input[type^="c"]{/*Aplico estilo a los inputs que comienzan en "c"*/
+    box-shadow: 0px 0.1px 4px rgba(0, 0, 0, 0.549);
+}
+optgroup{/*aplico estilo a contenedor de opciones*/
+    font-weight: bold;
+    color: #163859;
+    padding: 5px;
+}
+optgroup option{/*Aplico estilo a cada opcion de mi optgroup*/
+    padding: 8px 15px;
+    margin: 2px 0px;
+}
+input[type="range"]{/*Estiro la barra de range a que ocupe el 100% del ancho*/
+    width: 100%;
+}
+input[type="color"]{
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+}
+
+input[type="submit"],/*Aplico estilo a los botones del final de mi formulario (enviar y resetear)*/
+input[type="reset"]{
+    min-width: 100px;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+input[type="submit"]{/*Aqui solamente al boton de enviar*/
+    background: linear-gradient(to right,#1d8dfc, #004d99);
+    color: white;
+}
+input[type="submit"]:hover{/*Aplico un estilo al pasar el mouse sobre el boton de enviar*/
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px #004d99;
+}
+input[type="reset"]{
+    background: linear-gradient(to right, #ff3333, #6d0000);
+    color: white;
+}
+input[type="reset"]:hover{/*Aqui tambien aplico un estilo de pasar el mouse sobre mi boton de resetear*/
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px #6d0000;
+}
+
+form > div:last-of-type{/*Aqui aplico estilos a mi ultimo div dentro de mi formulario*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+input:focus, select:focus, textarea:focus{ /*Aqui aplico estilos para que cuando esten seleccionados se haga cierta animacion*/
+    transform: translateY(-2px);
+    outline: none;
+    border-color: #004d99;
+    box-shadow: 0px 0px 10px #005cb8a5;
+    background: white;
+}
+
+
+
+
+
+/*Ahora los diseño responsive con media queries*/
+/* -------> TABLETS (hasta 768px)<-------*/
+@media (max-width: 768px) {
+    /*Algunos estilos generales*/
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+    }
+    /*--->HEADER<----*/
+    #header-pagina{
+        flex-direction: column;
+    }
+    #header-pagina h1{
+        font-size: 2.2rem;
+        padding-right: 50px;
+        text-align: center;
+    }
+    nav{
+        padding: 15px 20px;
+    }
+    nav ul{
+        justify-content: center;
+    }
+    .enlaces a{ 
+        padding: 10px 10px;
+        gap: 10px;
+    }  
+    /*------->FOOTER<----*/
+    footer p{
+        font-size: 1.1rem;
+    }
+    .copyright{
+        font-size: 1.1rem;
+    }
+
+    /*----------->INDEX.HTML<-------*/
+    
+    
+    .titulo-principal{
+        height: 25rem;
+    }
+    .titulo-principal h2{
+        font-size: 2rem;
+    }
+    .main-articulos{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-articulos article p:first-of-type::first-letter {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 1;
+    }
+    .main-articulos article,
+    main>div>div,
+    .barra-lateral {
+        width: 100%;
+    }
+    .barra-lateral {
+        margin-top: 30px;
+    }
+    
+    /*--------->CONTENT.html<----*/
+   .section-video{
+        margin: auto 30px;
+   }
+   .section-archivos h2{
+    min-height: 0px;
+    }
+    iframe{
+        flex: 1 1 200px;
+    }
+    table {
+        font-size: 0.95rem;
+    }
+    th, td {
+        padding: 12px 10px;
+    }
+    figure {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    /*---->CONTACT.html<-----*/
+    form {
+        padding: 20px;
+        margin: 20px;
+    }
+    #main-formulario>h2, 
+    #main-formulario>p {
+        margin: 15px;
+    }
+}
+
+/*-----------> MÓVILES (hasta 480px)<----------*/
+@media (max-width: 480px) {
+    
+    /*--->Estilos generales<----*/    
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    section {
+        margin-bottom: 5rem;
+    }
+    /*----->HEADER<-----*/
+    #header-pagina{
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding-left: 0px;
+    }
+    .enlaces a {
+        display: block;
+        width: 200px;
+        margin: 0px auto;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+    nav li:nth-child(3) {
+        border-left: none;
+        padding-left: 0px;
+
+    }
+    #header-pagina nav li:nth-child(3) {
+    border-top: none;
+    }
+
+
+    /*------->FOOTER<--------*/
+    .end-links {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.2rem;
+    }
+    .end-links p {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .copyright {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+
+    /*----->INDEX.HTML<----*/
+    .titulo-principal h2::after {
+        display: none;
+    }
+    #header-pagina h1 {
+        font-size: 1.8rem;
+    }
+
+    .titulo-principal {
+        height: 30rem;
+    }
+    
+    .titulo-principal h2 {
+        font-size: 1.8rem;
+    }
+    .main-articulos {
+        margin: 0 10px;
+        gap: 20px;
+    }
+    .main-articulos article, main>div>div {
+        padding: 20px;
+        font-size: 1.4rem;
+    }
+    h3 ~ p {
+        font-size: 1.2rem;
+    }
+
+    /*------>CONTENT.html<-----*/
+    #main-contenido>section:first-child {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .section-video video {
+        height: 250px;
+        border-width: 5px;
+    }
+    
+    table{
+        font-size: 0.9rem;
+    }
+    th,td{
+        padding: 10px 8px;
+    }
+    
+    caption{
+        font-size: 1.2rem;
+    }    
+    .section-galeria{
+        gap: 20px;
+        padding: 10px;
+    }
+
+
+    /*----->CONTACT.html<----*/
+
+    form {
+        padding: 15px;
+        margin: 15px 10px;
+    }
+    
+    fieldset {
+        padding: 15px;
+    }
+    
+    legend {
+        font-size: 1.4rem;
+    }
+    
+    label {
+        font-size: 1rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="url"],
+    input[type="date"],
+    select,
+    textarea {
+        max-width: 100%;
+        font-size: 0.95rem;
+    }
+    
+    input[type="submit"],
+    input[type="reset"] {
+        padding: 12px 20px;
+        font-size: 1rem;
+        min-width: 80px;
+    }
+    
+    fieldset > p + div {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pixeles{
+            width: 800px;
+            background-color: aqua;}
+            /* 
+            ✅ USAR px PARA:
+            - Bordes (border: 1px solid)
+            - Sombras (box-shadow: 0 2px 4px)
+            - Efectos visuales (blur, drop-shadow)
+            - Iconos sistema (width/height: 24px)
+            - Tamaños mínimos (min-width: 44px - accesibilidad)
+            - Coordenadas exactas (background-position)
+
+            ❌ EVITAR px PARA:
+            - Tipografía principal → USAR rem
+            - Layouts/contenedores → USAR %, fr, vw
+            - Espaciado general → USAR rem
+            - Media queries → USAR em
+            - Componentes reutilizables → USAR em (contexto interno)
+
+            💡 EJEMPLOS CORRECTOS:
+            border: 1px solid #000;          ✅
+            font-size: 1rem;                 ✅
+            width: 100%; max-width: 1200px;  ✅ (px solo para límite)
+            padding: 1rem;                   ✅
+            min-height: 44px;                ✅ (accesibilidad)
+            */
+        .centimetros{
+            width: 21.1667cm;
+            background-color: aqua;
+            /*1 cm = 96/2.54 ≈ 37.795 px*/
+        }
+        .milimetros{
+            width: 211.6667mm;
+            background-color: aqua;
+            /*1 mm = 96/25.4 ≈ 3.7795 px*/
+        }
+        .pulgadas{
+            width: 8.3333in;
+            background-color: aqua;
+            /*1 in = 96 px*/
+        }
+        .puntos{
+            width: 600pt;
+            background-color: aqua;
+            /*1 pt = 96/72 ≈ 1.333 px
+            1 px = 0.75 pt*/
+        }
+        .picas{
+            width: 50pc;
+            background-color: aqua;
+            /*1 pc = 96/6 = 16 px
+            1 pc = 12 pt*/
+        }
+    </style>
+</head>
+<body>
+    <div class="pixeles">Hi</div><br>
+    <div class="centimetros">Hi</div><br>
+    <div class="milimetros">Hi</div><br>
+    <div class="pulgadas">Hi</div><br>
+    <div class="puntos">Hi</div><br>
+    <div class="picas">Hi</div>
+</body>
+</html>

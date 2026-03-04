@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="book-to-json.xsl" type="text/xsl"?>
+<book>
+    <title>Example Book</title>
+    <author nationality="Argentina">John Doe</author>
+    <year>2024</year>
+    <pages>1000</pages>
+    <description>This is the introduction to the book.</description>
+    <links>
+        <link>http://example.com/chapter1</link>
+        <link>http://example.com/chapter32131255</link>
+    </links>
+</book>

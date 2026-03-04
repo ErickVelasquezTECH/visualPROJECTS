@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido - Palestina Libre</title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+
+<body>
+    <!--Encabezado de mi pagina-->
+    <header id="header-pagina">
+        <h1>PALESTINA LIBRE - Ayuda humanitaria</h1>
+        <nav class="enlaces">
+            <!--Invocamos el "indice" de mi pagina-->
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="content.html">Contenido</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Cuerpo de mi pagina-->
+    <main id="main-contenido">
+        <section>
+            <h2>Organizaciones de ayuda en Palestina</h2>
+            <!--Creamos una estrucutra de tabla completa con atributos-->
+            <table>
+                <caption>Principales organizaciones humanitarias</caption>
+                <!--Introducimos la estructura semantica de tabla-->
+                <thead>
+                    <tr>
+                        <th scope="col">Organizacion</th>
+                        <th scope="col">Area de trabajo</th>
+                        <th scope="col">Fundacion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><mark>UNRWA</mark></td>
+                        <td>Educacion, salud y vivienda</td>
+                        <td>1949</td>
+                    </tr>
+                    <tr>
+                        <td><mark>Cruz Roja</mark></td>
+                        <td>Atencion medica de emergencia</td>
+                        <td>1863</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><mark>Save the Children</mark></td>
+                        <td>Proteccion infantil y ayuda psicologica</td>
+                        <td>1919</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Proyectos activos en Gaza y Cisjordania</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><strong>Datos actualizados a 2025</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <section class="section-galeria">
+            <h2>Imagenes informativas</h2>
+            <!--Introducimos imagenes con figure que nos permite ponerle una pequeña definicion-->
+            <figure>
+                <img src="assets/images/palestina1.jpg" alt="Personas recibiendo ayuda humanitaria" width="350"
+                    height="200">
+                <figcaption>Distribucion de alimentos en campamentos</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/medicovoluntario.jpg" alt="Enfermeros voluntarios ayudando en campamentos"
+                    width="350" height="200">
+                <figcaption>Enfermeros voluntarios ayudando a civiles palestinos afectados</figcaption>
+            </figure>
+        </section>
+        <section class="section-video">
+            <!--Agregamos un video-->
+            <h2>Multimedia informativa</h2>
+            <p>Estos materiales audiovisuales muestran la realidad diaria en Palestina y los esfuerzos de las
+                organizaciones por ofrecer esperanza.</p>
+            <video src="assets/media/Gazapan.mp4" controls width="400"></video>
+        </section>
+        <section class="section-archivos">
+            <!--Agregamos un video de youtube y pdf adjunto-->
+
+            <h2>Recursos y testimonios</h2>
+            <iframe width="400" height="250" src="https://www.youtube.com/embed/q5AYjfMVH1k"
+                title="YouTube short sobre Palestina"></iframe>
+            <iframe src="assets/media/PalestinaconflictoIsrael.pdf" width="400" height="250"
+                title="Informe del conflicto entre Israel y Palestina PDF"></iframe>
+        </section>
+    </main>
+    <footer>
+        <!--Pie de pagina con enlaces que se repetiran en todas las paginas, incluye lo del copyright-->
+        <p class="copyright">
+            <small>© 2025 Palestina Libre - Proyecto Humanitario.</small>
+        </p>
+        <div class="end-links">
+            <p>
+                <small>
+                    <a href="https://www.unrwa.org/">UNRWA (Agencia de las Naciones Unidas para los Refugiados de
+                        Palestina
+                        en Oriente Próximo)</a>|
+                    <a href="mailto:palestina@ayuda.org">Correo</a>|
+                    <a href="#header-pagina">Volver arriba</a>
+                </small>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .radial-gradient{
+            background: radial-gradient(circle, red, blue, green);
+            /*Se empieza como un circulo desde el centro, existen varias versiones como:
+            -ellipse
+            Si agregar a cualquiera (circle o ellipse) tambien puedes poner to top, to...*/
+
+        }
+        .multiple-gradient{
+            background: linear-gradient(90deg, red 0%, yellow 25%, green 50%,
+             blue 75%, purple 100%);
+             /* En el 0% (inicio): comienza en rojo puro
+                En el 25%: debe ser amarillo puro
+                Del 0% al 25%: transición gradual de rojo → amarillo
+                Del 25% al 50%: transición gradual de amarillo → verde
+                Del 50% al 75%: transición gradual de verde → azul
+                Del 75% al 100%: transición gradual de azul → morado*/
+        }
+        .repeating-linear-gradient{
+            background: repeating-linear-gradient(90deg, red, blue 100px);
+            /*Es necesario poner "px" para indicar el tamaño que se va repetir, aqui se entiende que
+            de red empieza en 0px y blue en 10px y asi todo el rato... es confuso*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="radial-gradient">Radial</div><br>
+    <div class="multiple-gradient">multiple</div><br>
+    <div class="repeating-linear-gradient">repeating</div>
+</body>
+</html>

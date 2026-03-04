@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hsl{
+            color: hsl(229, 100%, 50%); /*H de hue(matiz), S de saturacion y L de luminosidad
+            Si apretar el cuadradito de color veras como funciona...*/
+        }
+        .hsla{
+            color: hsla(229, 100%, 50%, 0.5); /*funciona como el rgba, es 0 hasta 1 la transparencia*/
+        }
+        .hsla-modern{
+            color: hsl(229 100% 50% /0.3) /*Version moderna, es igual al color moderno */
+        }
+    </style>
+</head>
+<body>
+    <div class="hsl">hsl</div>
+    <div class="hsla">hsla</div>
+    <div class="hsla-modern">hsl moderno</div>
+</body>
+</html>

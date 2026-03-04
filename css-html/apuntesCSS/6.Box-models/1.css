@@ -1,0 +1,26 @@
+.container{
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    padding: 10px 5px 8px 10px;
+    /*padding-top: 
+        //-right:
+        //-bottom:
+        //-left:
+    */
+    border: 1px solid blue;
+    /* dashed (rayitas separadas)
+        dotted (muchos cuadraditos pequeñitos)
+        double (doble linea)
+        groove (mas grueso) */
+    margin: 10px auto;
+    /*El auto sirve para centrado horizontal, solamentente
+    para left y right
+        margin-left: auto
+        margin-right: auto*/
+
+    box-sizing: border-box;
+    /*Sirve para que no exista la suma de padding, border y content*/
+    /*Sera todo el tamaño exacto de w y h*/
+    /*No es necesario ponerlo si ya pusiste en el html o "*" */
+}

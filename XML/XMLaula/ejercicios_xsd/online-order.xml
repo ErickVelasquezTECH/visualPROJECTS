@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order xmlns="http://tierno.es/online-order"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://tierno.es/online-order online-order.xsd">
+
+    <orderNumber>ZA-9867</orderNumber>
+    <orderDate>2026-02-06T12:31:02</orderDate>
+    <customer>
+        <fullName>Luz García</fullName>
+        <email>luz@l.com</email>
+        <shippingAddress>
+            <street>Calle...</street>
+            <city>Madrid</city>
+            <zipCode>28010</zipCode>
+        </shippingAddress>
+    </customer>
+    <products>
+        <product type="physical">
+            <productCode>asdf</productCode>
+            <description>descripción...</description>
+            <unitPrice>55.3</unitPrice>
+            <quantity>9</quantity>
+        </product>
+         <product type="digital">
+            <productCode>asdf</productCode>
+            <description>descripción...</description>
+            <unitPrice>55.3</unitPrice>
+            <quantity>9</quantity>
+            <discount>5</discount>
+        </product>
+    </products>
+    <payment>
+        <method>creditCard</method>
+        <totalAmount>55.6</totalAmount>
+    </payment>
+</order>

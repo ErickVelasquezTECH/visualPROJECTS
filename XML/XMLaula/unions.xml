@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unions [
+    <!-- Aquí van las reglas de los elementos -->
+    <!ELEMENT unions (union+)>
+    <!ELEMENT union (name*, number-affiliated, headquarter, sectors, (spokesman|spokesperson)+)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT number-affiliated (#PCDATA)>
+    <!ELEMENT headquarter (#PCDATA)>
+    <!ELEMENT sectors (sector)>
+    <!ELEMENT sector (name, city)>
+    <!ELEMENT city (#PCDATA)>
+    <!ELEMENT spokesperson (#PCDATA)>
+    <!ELEMENT spokesman (#PCDATA)>
+    <!ATTLIST union id ID #REQUIRED>
+    <!ATTLIST union language (es|en|ar) #REQUIRED >
+    <!ATTLIST union country CDATA "Spain">
+    <!ENTITY city "Madrid">
+]>
+
+<unions>
+    <union id="a53" language="en" country="UK">
+        <name>CGT</name>
+        <number-affiliated>1200</number-affiliated>
+        <headquarter>C/ Trévere 25</headquarter>
+        <sectors>
+            <sector>
+                <name>Enseñanza&lt;Secundaria&gt;</name>
+                <!-- Enseñanza<Secundaria> -->
+                <city>&city;</city>
+            </sector>
+        </sectors>
+        <spokesperson>Víctor</spokesperson>
+    </union>
+    <union id="a54" language="es">
+        <name>CCOO</name>
+        <number-affiliated>1300</number-affiliated>
+        <headquarter>C/ Pez 8</headquarter>
+        <sectors>
+            <sector>
+                <name>Enseñanza</name>
+                <city>Madrid</city>
+            </sector>
+        </sectors>
+        <spokesperson>Víctor</spokesperson>
+    </union>
+    <union id="e53" language="en" country="UK">
+        <number-affiliated>1200</number-affiliated>
+        <headquarter>C/ Trévere 25</headquarter>
+        <sectors>
+            <sector>
+                <name>Enseñanza&lt;Secundaria&gt;</name>
+                <!-- Enseñanza<Secundaria> -->
+                <city>&city;</city>
+            </sector>
+        </sectors>
+        <spokesman>Víctor</spokesman>
+        <spokesperson>Otro</spokesperson>
+    </union>
+</unions>

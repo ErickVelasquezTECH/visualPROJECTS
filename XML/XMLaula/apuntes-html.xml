@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Este fichero contiene una chuleta de HTML -->
+<codes>
+    <code>
+        <name>Ejemplo de menú de navegación</name>
+        <snippet>
+            <![CDATA[
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Contact</li>
+                    <li>Exit</li>
+                </ul>
+            </nav>
+            ]]>
+        </snippet>
+    </code>
+    <code>
+        <name>Operador de comparación menor o igual en Java</name>
+        <snippet>
+            <!-- <= Esto da error, porque < lo interpreta como apertura de tag -->
+             <![CDATA[
+                  <=
+             ]]>
+        </snippet>
+    </code>
+    <code>
+        <name>Operador de comparación mayor o igual en Java</name>
+        <snippet>
+            <!-- >= Esto da error, porque < lo interpreta como apertura de tag -->
+            &gt;=
+        </snippet>
+    </code>
+</codes>

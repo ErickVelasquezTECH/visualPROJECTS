@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE university_library SYSTEM "university_library.dtd">
+<university_library>
+  <department name="Computer Science" code="CS">
+    <course course_id="CS101">
+      <course_name>Programming Fundamentals</course_name>
+      <required_textbooks> <!-- puede haber muchos -->
+        <textbook isbn="978-0131103627">
+          <title>The C Programming Language</title>
+          <authors>
+            <author>Brian W. Kernighan</author>
+            <author>Dennis M. Ritchie</author>
+          </authors>
+          <edition>2nd</edition>
+          <publisher>Prentice Hall</publisher> <!-- opcional -->
+          <year>1988</year> <!-- opcional -->
+          <library_copies total="15" available="3" reserved="5" /> <!-- valores por defecto a 0 en
+          los 3-->
+        </textbook>
+        <textbook isbn="978-0131103627" format="physical">
+          <title>The C Programming Language</title>
+          <authors>
+            <author>Brian W. Kernighan</author>
+            <author>Dennis M. Ritchie</author>
+          </authors>
+        </textbook>
+      </required_textbooks>
+      <recommended_readings>
+        <online_resource access_type="free"> <!-- valores yes o no-->
+          <title>Python Tutorial for Beginners</title>
+          <url>https://docs.python.org/3/tutorial/</url>
+        </online_resource>
+      </recommended_readings>
+    </course>
+  </department>
+
+  <library_services>
+    <service service_id="interlibrary">
+      <service_name>Interlibrary Loan</service_name>
+      <available_to>all_students</available_to>
+      <max_items_per_month>10</max_items_per_month>
+      <fee currency="EUR">0.00 </fee>
+    </service>
+  </library_services>
+</university_library>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://tierno.es/online-order"
+    elementFormDefault="qualified">
+    <!-- 
+    CREAR UN XML VÁLIDO QUE CUMPLA:
+    - Pedido con 3-5 productos diferentes
+    - Usar diferentes métodos de pago
+    - Algunos productos con descuento, otros sin
+    - Dirección completa o solo email para digital
+    - Total debe coincidir con suma de productos
+    - Al menos un producto con cantidad > 1
+  -->
+    <xs:element name="order">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="orderNumber" type="xs:ID" />
+                <xs:element name="orderDate" type="xs:dateTime" />
+                <xs:element name="customer">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="fullName" type="xs:string" />
+                            <xs:element name="email" type="xs:string" />
+                            <xs:choice minOccurs="0">
+                                <xs:element name="shippingAddress">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="street" type="xs:string" />
+                                            <xs:element name="city" type="xs:string" />
+                                            <xs:element name="zipCode" type="xs:string" />
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                                <xs:element name="digitalDelivery" type="xs:string" />
+                            </xs:choice>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="products">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="product" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="productCode" type="xs:string" />
+                                        <xs:element name="description" type="xs:string" />
+                                        <xs:element name="unitPrice" type="xs:decimal" />
+                                        <xs:element name="quantity" type="xs:positiveInteger" />
+                                        <xs:element name="discount" type="xs:decimal" minOccurs="0"
+                                            default="0" />
+                                    </xs:sequence>
+                                    <xs:attribute name="type" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="physical" />
+                                                <xs:enumeration value="digital" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="payment">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="method">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="creditCard" />
+                                        <xs:enumeration value="paypal" />
+                                        <xs:enumeration value="bankTransfer" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="totalAmount" type="xs:decimal" />
+                            <xs:element name="shippingCost" type="xs:decimal" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="status" default="pending">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="pending" />
+                        <xs:enumeration value="confirmed" />
+                        <xs:enumeration value="shipped" />
+                        <xs:enumeration value="delivered" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

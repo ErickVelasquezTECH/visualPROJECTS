@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://erick.es/red"
+    xmlns:red="http://erick.es/red"
+    elementFormDefault="qualified">
+
+
+    <xs:element name="redSocial">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="usuario" type="red:usuarioType"/>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="usuarioType">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="email" type="red:emailType"/>
+            <xs:element name="telefono" minOccurs="0" type="red:telefonoType"/>
+            <xs:element name="seguidores" minOccurs="0" type="red:seguidoresType"/>
+            <xs:element name="amigos" minOccurs="0" type="red:amigostype"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="rol" type="red:rolType" default="usuario"/>
+    </xs:complexType>
+
+
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9\.]+@[a-zA-Z]+(\.[a-zA-Z]+)+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="telefonoType">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="prefijo" use="optional">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="+34"/>
+                            <xs:enumeration value="+33"/>
+                            <xs:enumeration value="+44"/>
+                            <xs:enumeration value="+49"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="seguidoresType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+     <xs:complexType name="amigostype">
+        <xs:sequence minOccurs="0" maxOccurs="20">
+            <xs:element name="amigo">
+                <xs:complexType>
+                    <xs:attribute name="ref" type="xs:IDREF" use="required"/> <!-- No especifica si es obligatorio o opcional, asi que le puse obligatorio...-->
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="rolType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="admin"/>
+            <xs:enumeration value="usuario"/>
+            <xs:enumeration value="invitado"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

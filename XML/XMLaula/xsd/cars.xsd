@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://tierno.es"
+    elementFormDefault="qualified">
+
+    <xs:element name="cars" >
+        <!-- Tipo complejo con subelementos -->
+        <xs:complexType>
+            <!-- orden y si es obligatorio porner estos subelementos -->
+            <!-- En clase hemos decidido que estén todos y estén en orden -->
+            <xs:sequence>
+                <xs:element name="brand" type="xs:string"/>
+                <xs:element name="model" type="xs:string"/>
+                <xs:element name="asientos" type="xs:boolean"/>
+                <xs:element name="manual">
+                    <xs:complexType>
+                        <xs:attribute name="marchas" type="xs:positiveInteger"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="plate">
+                    <xs:complexType>
+                        <xs:attribute name="material" type="xs:string"/>
+                        <xs:attribute name="number" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

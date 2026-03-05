@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  REQUISITOS para el XSD:
+  - Elemento raíz: "bookings"
+  - Puede haber varios elementos booking.
+  - Cada reserva debe tener ID (formato: RES-XXXX donde X es dígito)
+  - Fechas (checkinDate y checkoutDate): entrada y salida (formato fecha ISO: YYYY-MM-DD)
+  - Huésped (guest): name (obligatorio), email (validar formato email), phone (opcional)
+  - Tipo de habitación (roomType): valores fijos (individual, doble, suite, familiar)
+  - Servicios adicionales: lista (puede repetirse): desayuno, spa, parking, gym
+  - Precio total: decimal con 2 decimales, mínimo 50.00
+  - Bonus: Validar que fechaSalida > fechaEntrada
+-->
+<bookings>
+    <booking id="RES-1001">
+        <checkinDate>2024-06-15</checkinDate>
+        <checkoutDate>2024-06-20</checkoutDate>
+        <guest>
+            <name>María López</name>
+            <email>maria.lopez@email.com</email>
+            <phone>+34600123456</phone>
+        </guest>
+        <roomType>double</roomType>
+        <service>breakfast</service>
+        <service>parking</service>
+        <totalPrice>450.00</totalPrice>
+    </booking>
+    
+</bookings>

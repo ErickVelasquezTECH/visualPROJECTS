@@ -1,0 +1,17 @@
+<!ELEMENT university_library (department+, library_services)>
+<!ELEMENT department (course+)>
+
+<!-- Defino atributos de department -->
+<!ATTLIST department
+    name CDATA #REQUIRED
+    code ID #REQUIRED >
+<!ELEMENT course (course_name, required_textbooks,recommended_readings)>
+
+<!ATTLIST course course_id ID #REQUIRED>
+
+<!ELEMENT course_name (#PCDATA)>
+<!ELEMENT required_textbooks (textbook+)>
+<!ELEMENT textbook (title, authors, edition, publisher?, year?, library_copies*)>
+
+<!ATTLIST textbook isbn CDATA #REQUIRED
+                format (physical | ebook | others) "others">

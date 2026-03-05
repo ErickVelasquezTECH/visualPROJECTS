@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://erick.es/cat"
+    xmlns:cat="http://erick.es/cat"
+    elementFormDefault="qualified">
+
+    <xs:element name="catalogo">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="10">
+                <xs:element name="categoria">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="1" maxOccurs="50">
+                            <xs:element name="producto" type="cat:productoType"/>
+                        </xs:sequence>
+                        <xs:attribute name="nombre" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="tienda" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+
+
+    <xs:complexType name="productoType">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+            <xs:element name="precio" type="cat:precioType"/>
+            <xs:element name="especificaciones" type="cat:especificacionesType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="codigo" type="cat:codigoType" use="required"/>
+        <xs:attribute name="stock" type="cat:stockType" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="precioType">
+        <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+                <xs:attribute name="moneda" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="EUR"/>
+                            <xs:enumeration value="USD"/>
+                            <xs:enumeration value="GBP"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="especificacionesType">
+        <xs:sequence minOccurs="0" maxOccurs="10">
+            <xs:element name="espec">                                                           
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="nombre" type="xs:string" use="required"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:simpleType name="codigoType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="P[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    
+    <xs:simpleType name="stockType">
+        <xs:restriction base="xs:integer">
+            <xs:minExclusive value="0"/>
+            <xs:maxExclusive value="1000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    
+</xs:schema>

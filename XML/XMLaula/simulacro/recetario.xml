@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Crea recetario.dtd y recetario.xsd para que se valide el siguiente XML.
+En DTD deberás cumplir las restricciones abajo indicadas en cuanto a obligatoriedad de elementos, número de veces que aparecen o los que tienen un listado de posibles valores.
+
+RESTRICCIONES PARA EL XSD (y DTD):
+- Elemento raíz: recetario
+- De 1 a 5 recetas
+- Cada receta tiene:
+  - Nombre obligatorio
+  - Tiempo en minutos (entero 1-240)
+  - Dificultad (fácil, media, difícil)
+  - De 2 a 10 ingredientes (cada ingrediente: texto, cantidad opcional)
+  - Pasos: de 0 a 20 pasos
+  - Alergenos: dentro tiene de 0 a 20 elementos alergeno
+    - nombre: puede tener el atributo lang, que puede ser es/en/fr/ar
+    - gravedad: puede ser baja/media/alta. El atributo servicios médicos es obligatorio, puede ser true/false.
+
+NOTAS: Tienes que hacer al menos 3 tipos con nombre aplicados a elementos o atributos.
+
+-->
+<recetario>
+    <receta>
+        <nombre>Tortilla de patatas</nombre>
+        <tiempo>30</tiempo>
+        <dificultad>facil</dificultad>
+        <ingredientes>
+            <ingrediente cantidad="4">Huevos</ingrediente>
+            <ingrediente cantidad="3">Patatas</ingrediente>
+            <ingrediente>Sal</ingrediente>
+            <ingrediente cantidad="1">Cebolla</ingrediente>
+        </ingredientes>
+        <pasos>
+            <paso>Pelar y cortar patatas</paso>
+            <paso>Freír patatas y cebolla</paso>
+            <paso>Batir huevos y mezclar</paso>
+            <paso>Cuajar la tortilla</paso>
+        </pasos>
+        <alergenos>
+            <alergeno>
+                <nombre lang="es">Huevo</nombre>
+                <gravedad servicios-medicos="true">Media</gravedad>
+            </alergeno>
+        </alergenos>
+    </receta>
+</recetario>

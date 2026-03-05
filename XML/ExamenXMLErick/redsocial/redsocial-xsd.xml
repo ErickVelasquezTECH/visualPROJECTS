@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+EJERCICIO 1 (2 PUNTOS)
+
+Crea redsocial.xsd para que se valide el siguiente XML y cumpla con las restricciones indicadas a continuación.
+
+RESTRICCIONES PARA EL XSD:
+- Raíz: redSocial con atributo nombre obligatorio
+- Puede haber de 1 a n usuarios.
+- Cada usuario tiene:
+    - Atributos: id obligatorio, rol (puede ser "admin", "usuario" o "invitado". Por defecto es "usuario")
+    - Elementos en orden: nombre (obligatorio), email (obligatorio), telefono (opcional), seguidores (opcional), amigos (opcional)
+    - email debe tener patrón de email válido
+    - seguidores debe ser un número entre 0 y n.
+    - amigos contiene 0-20 elementos amigo vacíos. El atributo ref debe ser de tipo IDREF.
+    - telefono tiene como contenido un string. Su atributo prefijo (opcional) puede tener los valores +34, +33, +44 o +49. 
+
+NOTAS: Tienes que hacer al menos 3 tipos con nombre aplicados a elementos o atributos.
+-->
+<redSocial xmlns="http://erick.es/red"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://erick.es/red redsocial.xsd"
+        nombre="Conectados">
+    <usuario id="U001" rol="admin">
+        <nombre>Ana García</nombre>
+        <email>ana@email.com</email>
+        <telefono prefijo="+34">612345678</telefono>
+        <seguidores>150</seguidores>
+        <amigos>
+            <amigo ref="U002"/>
+        </amigos>
+    </usuario>
+    <usuario id="U002" rol="usuario">
+        <nombre>Carlos López</nombre>
+        <email>carlos@email.com</email>
+        <telefono prefijo="+34">623456789</telefono>
+        <seguidores>75</seguidores>
+    </usuario>
+</redSocial>

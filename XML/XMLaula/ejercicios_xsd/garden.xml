@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    ============================================================
+    FICHERO: botanical_garden.xml
+    DESCRIPCIÓN: Catálogo de especies vegetales en jardín botánico
+    EJERCICIO: Crear DTD y XSD que validen este documento
+    ============================================================
+    
+    RESTRICCIONES PARA DTD/XSD:
+    - Elemento raíz: garden
+    - Debe contener al menos una sección (section) y puede tener múltiples
+    - Fechas en formato YYYY-MM-DD
+    - Códigos con patrones específicos
+    - Valores numéricos con rangos
+    - Atributos requeridos y opcionales
+    - Valores enumerados para tipos, exposiciones, etc.
+    - IDs y referencias IDREF para cuidadores
+-->
+
+<garden 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.botanicalgarden.es/catalog"
+    name="Real Jardín Botánico"
+    city="Madrid"
+    foundation_date="1755-10-17"
+    area="8.5">
+    
+    <!-- 
+        INFORMACIÓN GENERAL
+        - Elemento: info
+        - Contiene: schedule (OBLIGATORIO, texto)
+        - Contiene: admission (OBLIGATORIO)
+        - Contiene: email (OPCIONAL, patrón de email)
+        - Contiene: phone (OPCIONAL, patrón +34 9 dígitos)
+        - Contiene: website (OPCIONAL, patrón URL)
+    -->
+    <info>
+        <schedule>Lunes a Domingo 10:00-18:00</schedule>
+        <admission>12.50</admission>
+        <email>info@rjb.csic.es</email>
+        <phone>+34 914 200 438</phone>
+        <website>https://www.rjb.csic.es</website>
+    </info>
+    
+    <!-- 
+        SECCIÓN DEL JARDÍN
+        - Elemento: section
+        - Atributo id: OBLIGATORIO, tipo ID, empieza por 'SEC'
+        - Atributo type: OBLIGATORIO, valores: exterior / greenhouse / aquatic / succulent / medicinal
+        - Atributo shaded: OPCIONAL, valores: yes / no (por defecto: no)
+        - Contiene: name (OBLIGATORIO, nombre de la sección)
+        - Contiene: curator (OBLIGATORIO, persona responsable)
+        - Contiene: area (OBLIGATORIO, decimal en m2)
+        - Contiene: species (0 o más elementos species)
+    -->
+    
+    <section id="SEC001" type="greenhouse" shaded="yes">
+        <name>Tropical Invernadero</name>
+        <curator>Dr. Ana Martínez</curator>
+        <area>450.5</area>
+        
+        <!-- 
+            ESPECIE VEGETAL
+            - Elemento: species
+            - Atributo id: OBLIGATORIO, tipo ID, empieza por 'SP'
+            - Atributo conservation: OBLIGATORIO, valores: critical / endangered / vulnerable / least_concern
+            - Atributo bloom_months: OPCIONAL, meses de floración (ej: "04-06" = abril a junio)
+            - Contiene: scientific_name (OBLIGATORIO)
+            - Contiene: common_name (OPCIONAL, puede haber varios)
+            - Contiene: family (OBLIGATORIO, familia botánica)
+            - Contiene: origin (OBLIGATORIO, país o región de origen)
+            - Contiene: height (OPCIONAL, número decimal en metros)
+            - Contiene: care_level (OPCIONAL, valores: easy / moderate / hard)
+            - Contiene: keeper_id (OPCIONAL, referencia IDREF a keeper)
+        -->
+        
+        <species id="SP001" conservation="vulnerable" bloom_months="01-12">
+            <scientific_name>Heliconia rostrata</scientific_name>
+            <common_name>Platanillo</common_name>
+            <common_name>Heliconia colgante</common_name>
+            <family>Heliconiaceae</family>
+            <origin>Perú, Ecuador</origin>
+            <height>2.5</height>
+            <care_level>moderate</care_level>
+            <keeper_id>K003</keeper_id>
+        </species>
+        
+        <species id="SP002" conservation="endangered">
+            <scientific_name>Saintpaulia ionantha</scientific_name>
+            <common_name>Violeta africana</common_name>
+            <family>Gesneriaceae</family>
+            <origin>Tanzania</origin>
+            <height>0.2</height>
+            <care_level>easy</care_level>
+            <keeper_id>K001</keeper_id>
+        </species>
+    </section>
+    
+    <section id="SEC002" type="medicinal">
+        <name>Jardín de Plantas Medicinales</name>
+        <curator>Dr. Carlos Ruiz</curator>
+        <area>320.0</area>
+        
+        <species id="SP003" conservation="least_concern" bloom_months="05-08">
+            <scientific_name>Matricaria chamomilla</scientific_name>
+            <common_name>Manzanilla</common_name>
+            <common_name>Camomila</common_name>
+            <family>Asteraceae</family>
+            <origin>Europa</origin>
+            <height>0.4</height>
+            <care_level>easy</care_level>
+            <keeper_id>K002</keeper_id>
+        </species>
+        
+        <species id="SP004" conservation="vulnerable">
+            <scientific_name>Drosera rotundifolia</scientific_name>
+            <common_name>Rocío del sol</common_name>
+            <common_name>Atrapamoscas</common_name>
+            <family>Droseraceae</family>
+            <origin>Hemisferio Norte</origin>
+            <height>0.1</height>
+            <care_level>hard</care_level>
+            <keeper_id>K004</keeper_id>
+        </species>
+        
+        <species id="SP005" conservation="least_concern">
+            <scientific_name>Aloe vera</scientific_name>
+            <common_name>Sábila</common_name>
+            <common_name>Aloe</common_name>
+            <family>Asphodelaceae</family>
+            <origin>Península Arábiga</origin>
+            <height>0.6</height>
+            <care_level>easy</care_level>
+            <keeper_id>K002</keeper_id>
+        </species>
+    </section>
+    
+    <section id="SEC003" type="succulent" shaded="no">
+        <name>Cactus y Suculentas</name>
+        <curator>Dra. Laura Gómez</curator>
+        <area>280.3</area>
+        
+        <species id="SP006" conservation="vulnerable" bloom_months="03-05">
+            <scientific_name>Echinocactus grusonii</scientific_name>
+            <common_name>Asiento de suegra</common_name>
+            <common_name>Cactus barril dorado</common_name>
+            <family>Cactaceae</family>
+            <origin>México</origin>
+            <height>0.9</height>
+            <care_level>moderate</care_level>
+            <keeper_id>K005</keeper_id>
+        </species>
+        
+        <species id="SP007" conservation="endangered">
+            <scientific_name>Astrophytum asterias</scientific_name>
+            <common_name>Cactus estrella</common_name>
+            <family>Cactaceae</family>
+            <origin>Texas, México</origin>
+            <height>0.1</height>
+            <care_level>hard</care_level>
+            <keeper_id>K005</keeper_id>
+        </species>
+    </section>
+    
+    <section id="SEC004" type="aquatic">
+        <name>Estanque y Plantas Acuáticas</name>
+        <curator>Dr. Miguel Fernández</curator>
+        <area>150.0</area>
+        
+        <species id="SP008" conservation="least_concern" bloom_months="06-09">
+            <scientific_name>Nymphaea alba</scientific_name>
+            <common_name>Nenúfar blanco</common_name>
+            <common_name>Lirio de agua</common_name>
+            <family>Nymphaeaceae</family>
+            <origin>Europa</origin>
+            <height>0.1</height>
+            <care_level>moderate</care_level>
+            <keeper_id>K006</keeper_id>
+        </species>
+    </section>
+    
+    <!-- 
+        CUIDADORES DEL JARDÍN
+        - Elemento: keepers (contenedor)
+        - Elemento: keeper
+        - Atributo id: OBLIGATORIO, tipo ID, empieza por 'K'
+        - Atributo specialty: OBLIGATORIO, valores: tropical / medicinal / succulent / aquatic / trees
+        - Atributo active_since: OBLIGATORIO, año (YYYY)
+        - Contiene: name (OBLIGATORIO, nombre completo)
+        - Contiene: certification (OPCIONAL, título o certificación)
+        - Contiene: assigned_sections (OPCIONAL, IDs de secciones separadas por comas)
+    -->
+    
+    <keepers>
+        <keeper id="K001" specialty="tropical" active_since="2018">
+            <name>Ana Martínez</name>
+            <certification>Máster en Botánica Tropical</certification>
+            <assigned_sections>SEC001</assigned_sections>
+        </keeper>
+        
+        <keeper id="K002" specialty="medicinal" active_since="2015">
+            <name>Carlos Ruiz</name>
+            <certification>Doctor en Etnobotánica</certification>
+            <assigned_sections>SEC002</assigned_sections>
+        </keeper>
+        
+        <keeper id="K003" specialty="tropical" active_since="2020">
+            <name>Elena Sánchez</name>
+            <certification>Técnico en Jardinería</certification>
+            <assigned_sections>SEC001</assigned_sections>
+        </keeper>
+        
+        <keeper id="K004" specialty="medicinal" active_since="2019">
+            <name>David López</name>
+            <assigned_sections>SEC002</assigned_sections>
+        </keeper>
+        
+        <keeper id="K005" specialty="succulent" active_since="2017">
+            <name>Laura Gómez</name>
+            <certification>Especialista en Cactáceas</certification>
+            <assigned_sections>SEC003</assigned_sections>
+        </keeper>
+        
+        <keeper id="K006" specialty="aquatic" active_since="2021">
+            <name>Miguel Fernández</name>
+            <certification>Máster en Ecosistemas Acuáticos</certification>
+            <assigned_sections>SEC004</assigned_sections>
+        </keeper>
+    </keepers>
+    
+    <!-- 
+        EVENTOS ESPECIALES
+        - Elemento: events (opcional)
+        - Elemento: event
+        - Atributo id: OBLIGATORIO, tipo ID, empieza por 'EV'
+        - Atributo season: OBLIGATORIO, valores: spring / summer / autumn / winter
+        - Contiene: name (OBLIGATORIO)
+        - Contiene: date (OBLIGATORIO, fecha YYYY-MM-DD)
+        - Contiene: description (OBLIGATORIO)
+        - Contiene: capacity (OPCIONAL, entero máximo de asistentes)
+    -->
+    
+    <events>
+        <event id="EV001" season="spring">
+            <name>Jornada de Plantas Medicinales</name>
+            <date>2024-04-15</date>
+            <description>Taller práctico sobre cultivo y usos de plantas medicinales</description>
+            <capacity>50</capacity>
+        </event>
+        
+        <event id="EV002" season="summer">
+            <name>Noche de los Cactus</name>
+            <date>2024-07-20</date>
+            <description>Visita nocturna a la colección de cactus con floración estival</description>
+            <capacity>30</capacity>
+        </event>
+    </events>
+    
+</garden>

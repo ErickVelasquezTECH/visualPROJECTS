@@ -1,0 +1,16 @@
+<!ELEMENT recetario (receta+)>
+<!ELEMENT receta (nombre, tiempo, dificultad, ingredientes, pasos, alergenos)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT tiempo (#PCDATA)>
+<!ELEMENT dificultad (#PCDATA)>
+<!ELEMENT ingredientes (ingrediente+)>
+<!ELEMENT ingrediente (#PCDATA)>
+<!ELEMENT pasos (paso*)>
+<!ELEMENT paso (#PCDATA)>
+<!ELEMENT alergenos (alergeno*)>
+<!ELEMENT alergeno (nombre, gravedad)>
+<!ELEMENT gravedad (#PCDATA)>
+
+<!ATTLIST ingrediente cantidad CDATA #IMPLIED>
+<!ATTLIST nombre lang (es|en|fr|ar) "es">
+<!ATTLIST gravedad servicios-medicos (true|false) #REQUIRED>

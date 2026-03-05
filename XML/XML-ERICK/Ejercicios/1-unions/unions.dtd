@@ -1,0 +1,18 @@
+<!ELEMENT unions (union+)>
+<!ELEMENT union 
+(name*, number-affiliated,headquarter,sectors,(spokesman|spokesperson)+)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT number-affiliated (#PCDATA)>
+<!ELEMENT headquarter (#PCDATA)>
+<!ELEMENT sectors (sector+)>
+<!ELEMENT sector (name, city)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT spokesman (#PCDATA)>
+<!ELEMENT spokesperson (#PCDATA)>
+
+<!ATTLIST union id ID #REQUIRED>
+<!ATTLIST union language (es|en|fr) #REQUIRED>
+<!ATTLIST union country CDATA "Spain">
+
+
+<!ENTITY city "Madrid">

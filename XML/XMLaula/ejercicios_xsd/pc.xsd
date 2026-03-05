@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://tierno.es/pc"
+    xmlns:tns="http://tierno.es/pc"
+    elementFormDefault="qualified">
+
+
+    <xs:element name="pc">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="processor">
+                    <xs:complexType>
+                        <xs:attribute name="brand" type="xs:string" />
+                        <xs:attribute name="hz" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="keyboard">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="lang" type="xs:string" />
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="speaker" type="tns:TypeSpeaker">
+
+                </xs:element>
+
+                <xs:element name="ram-slots">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ram" type="xs:positiveInteger" maxOccurs="unbounded" />
+                        </xs:sequence>
+                        <xs:attribute name="type" use="required" type="tns:RamTypes" />
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="screen" type="tns:TypeScreen" />
+                <xs:element name="display" type="tns:TypeScreen" />
+                
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!-- definicioń de datos reutlizables -->
+    <xs:simpleType name="RamTypes">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ddr2" />
+            <xs:enumeration value="ddr3" />
+            <xs:enumeration value="ddr4" />
+            <xs:enumeration value="ddr5" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="TypeSpeaker">
+        <xs:all>
+            <xs:element name="material">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="metal" />
+                        <xs:enumeration value="plastic" />
+                        <xs:enumeration value="other" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="power">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:minInclusive value="2" />
+                        <xs:maxInclusive value="10" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="TypeScreen">
+        <xs:sequence>
+            <xs:element name="inches" type="xs:string" />
+            <xs:element name="resolution" type="xs:decimal" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

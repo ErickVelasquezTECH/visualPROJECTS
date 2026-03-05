@@ -1,0 +1,61 @@
+<!-- 
+  DTD for Library Management System
+  Defines structure for book catalog
+-->
+
+<!-- Root element: contains one or more books -->
+<!ELEMENT library (book+)>
+
+<!-- Book element structure -->
+<!ELEMENT book (title, author+, publication, genre*, isbn, price, description?)>
+
+<!-- Title is simple text -->
+<!ELEMENT title (#PCDATA)>
+
+<!-- At least one author, possibly more -->
+<!ELEMENT author (firstname, lastname, nationality?)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT nationality (#PCDATA)>
+
+<!-- Publication information -->
+<!ELEMENT publication (publisher, year, edition?)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT edition (#PCDATA)>
+
+<!-- Genre: optional, multiple allowed -->
+<!ELEMENT genre (#PCDATA)>
+
+<!-- ISBN and price -->
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+
+<!-- Optional description with mixed content -->
+<!-- Tienes que garantizar que description pueda tener dentro etiquetas HTML -->
+<!ELEMENT description (#PCDATA)*>
+
+<!-- Attribute declarations -->
+
+<!-- Book attributes -->
+<!ATTLIST book
+    id          ID      #REQUIRED
+    available   (yes|no) "yes"
+    language    CDATA   "en"
+    format      (paperback|hardcover|ebook) "paperback"
+>
+
+<!-- Price attributes -->
+<!ATTLIST price
+    currency    (USD|EUR|GBP) "EUR"
+    tax-included (yes|no) "no"
+>
+
+<!-- Genre attribute -->
+<!ATTLIST genre
+    main-genre CDATA #IMPLIED
+>
+
+<!-- Entities for common text -->
+<!ENTITY library-name "City Central Library">
+<!ENTITY dinero "EUR">

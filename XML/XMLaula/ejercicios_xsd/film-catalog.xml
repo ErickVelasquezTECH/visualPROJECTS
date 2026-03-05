@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  REQUISITOS para el XSD:
+  - Elemento raíz: "catalog"
+  - Cada película debe tener: title (obligatorio), year (entre 1900-2024)
+  - Genre: lista de valores fijos (action, comedy, drama, sci-fi)
+  - Clasificación por edades (rating): opcional, valores: PG, PG-13, R, NC-17
+  - Director: puede tener atributo "nationality" (opcional)
+  - Duration: número positivo en minutos
+  - PUNTUACIÓN EXTRA: Usar xs:all en vez de xs:sequence
+-->
+<catalog xmlns="http://tierno.es/film-catalog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://tierno.es/film-catalog film-catalog.xsd">
+    <movie>
+        <title>El Padrino</title>
+        <year>1972</year>
+        <genre>drama</genre>
+        <rating>R</rating>
+        <director nationality="estadounidense">Francis Ford Coppola</director>
+        <duration>175</duration>
+    </movie>
+    <movie>
+        <title>Regreso al Futuro</title>
+        <year>1985</year>
+        <genre>sci-fi</genre>
+        <genre>comedy</genre>
+        <director>Robert Zemeckis</director>
+        <duration>116</duration>
+    </movie>
+</catalog>

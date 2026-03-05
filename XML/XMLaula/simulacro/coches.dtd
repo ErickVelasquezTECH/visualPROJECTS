@@ -1,0 +1,15 @@
+<!ELEMENT concesionario (coche+)>
+<!ATTLIST concesionario nombre CDATA #REQUIRED>
+
+<!ELEMENT coche (marca, modelo, año, kilometros, precio, extras?)>
+<!ATTLIST coche matricula CDATA #REQUIRED>
+
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT año (#PCDATA)>
+<!ELEMENT kilometros (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+
+<!ELEMENT extras (extra*)>
+<!ELEMENT extra (#PCDATA)>
+<!ATTLIST extra precio CDATA #REQUIRED>

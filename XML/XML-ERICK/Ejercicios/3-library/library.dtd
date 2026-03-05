@@ -1,0 +1,16 @@
+<!ELEMENT library (book+)>
+<!ELEMENT book (title, author, publication, isbn, price)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (firstname, lastname)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT publication (publisher, year)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+
+<!ATTLIST book id ID #REQUIRED 
+            available (yes|no) #REQUIRED
+            language (es|en|fr) "es"
+            format CDATA #REQUIRED>

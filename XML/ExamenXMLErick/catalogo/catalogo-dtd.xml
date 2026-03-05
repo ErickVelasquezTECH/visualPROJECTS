@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+EJERCICIO 4 (1.5 PUNTOS)
+
+Crea catalogo.dtd para que se valide el siguiente XML y cumpla con las restricciones indicadas a continuación.
+
+RESTRICCIONES PARA EL DTD:
+- Raíz: catalogo con atributo tienda obligatorio  
+- De 1 a n elementos categoria
+- Cada categoria tiene:
+    - Atributo nombre obligatorio
+    - De 1 a n producto
+- Cada producto tiene:
+    - Atributos: codigo (obligatorio), stock (opcional)
+    - Elementos en orden: nombre (obligatorio), descripcion (opcional), precio (obligatorio), especificaciones (opcional)
+    - precio tiene atributo moneda obligatorio (posibles valores: EUR, USD, GBP)
+    - especificaciones contiene 0-n espec con atributo nombre obligatorio
+-->
+<!DOCTYPE catalogo SYSTEM "catalogo.dtd">
+<catalogo tienda="TechStore">
+    <categoria nombre="Electrónica">
+        <producto codigo="P001" stock="25">
+            <nombre>Portátil Pro</nombre>
+            <descripcion>16GB RAM, 512GB SSD</descripcion>
+            <precio moneda="EUR">899.99</precio>
+            <especificaciones>
+                <espec nombre="procesador">Intel i7</espec>
+                <espec nombre="ram">16GB</espec>
+            </especificaciones>
+        </producto>
+        <producto codigo="P002" stock="10">
+            <nombre>Tablet Lite</nombre>
+            <precio moneda="EUR">249.50</precio>
+        </producto>
+    </categoria>
+    <categoria nombre="Libros">
+        <producto codigo="P003" stock="3">
+            <nombre>XML Avanzado</nombre>
+            <precio moneda="USD">45.99</precio>
+        </producto>
+    </categoria>
+</catalogo>

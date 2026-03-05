@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.example.com/library"
+    xmlns="http://www.example.com/library"
+    elementFormDefault="qualified">
+
+    <!-- Definiciones de elementos y tipos van aquí -->
+<!-- Tipos built-in (predefinidos) -->
+<xs:element name="title" type="xs:string" />
+<xs:element name="year" type="xs:gYear" />
+<xs:element name="price" type="xs:decimal" />
+<xs:element name="quantity" type="xs:positiveInteger" />
+<xs:element name="email" type="xs:string" /> <!-- Veremos restricciones después -->
+
+<!-- Algunos tipos built-in comunes: -->
+<!-- xs:string, xs:boolean, xs:decimal, xs:integer -->
+<!-- xs:date, xs:time, xs:dateTime -->
+<!-- xs:anyURI, xs:ID, xs:IDREF -->
+
+<xs:element name="language" type="xs:string" default="es"/>
+<xs:element name="owner" type="xs:string" fixed="TiernoGalvan"/>
+</xs:schema>

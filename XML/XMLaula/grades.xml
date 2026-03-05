@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<grades>
+    <student id="947">  <!-- id es un atributo del elemento student -->
+        <name>Víctor</name>
+        <average>7.8</average>
+        <subjects>
+            <subject>
+                <name-subject>Lenguaje de marcas</name-subject>
+                <code>LM</code>
+                <grade>8</grade>
+            </subject>
+            <subject>
+                <name-subject>Programación</name-subject>
+                <code>PROG</code>
+                <grade>8.9</grade>
+            </subject>
+        </subjects>
+    </student>
+    <student id="948">
+        <name>Ariadna</name>
+        <average>7.7</average>
+        <subjects>
+            <subject>
+                <name-subject>Programación</name-subject>
+                <code>PROG</code>
+                <grade>9.9</grade>
+            </subject>
+        </subjects>
+    </student>
+</grades>

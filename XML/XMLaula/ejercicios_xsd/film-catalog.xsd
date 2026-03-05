@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="http://tierno.es/film-catalog"
+    targetNamespace="http://tierno.es/film-catalog"
+    elementFormDefault="qualified">
+    <xs:element name="catalog">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="movie" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string" />
+                            <xs:element name="year">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="1900" />
+                                        <xs:maxExclusive value="2024" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="genre" type="tns:GenreTypes" maxOccurs="unbounded"/>
+                            <xs:element name="rating" type="tns:RatingType" minOccurs="0" />
+                            <xs:element name="director">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="nationality" type="xs:string" use="optional"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                           <xs:element name="duration" type="xs:positiveInteger"/> 
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- tipo para genre: -->
+    <xs:simpleType name="GenreTypes">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="action" />
+            <xs:enumeration value="comedy" />
+            <xs:enumeration value="drama" />
+            <xs:enumeration value="sci-fi" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- tipo para rating: -->
+     <xs:simpleType name="RatingType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PG"/>
+            <xs:enumeration value="PG-13"/>
+            <xs:enumeration value="R"/>
+            <xs:enumeration value="NC-17"/>
+        </xs:restriction>
+     </xs:simpleType>
+</xs:schema>

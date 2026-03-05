@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://tiernogalvan.es/coches" elementFormDefault="qualified" xmlns:coche="http://tiernogalvan.es/coches">
+
+    <!-- Elemento raíz -->
+    <xs:element name="concesionario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="coche" maxOccurs="unbounded" type="coche:CocheType" />
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición del tipo Coche (reutilizable) -->
+    <xs:complexType name="CocheType">
+        <xs:sequence>
+            <xs:element name="marca" type="xs:string" />
+            <xs:element name="modelo" type="xs:string" />
+            <xs:element name="año">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1990" />
+                        <xs:maxInclusive value="2024" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="kilometros">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="0" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="precio">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minExclusive value="0" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="extras" minOccurs="0" type="coche:ExtrasType" />
+        </xs:sequence>
+        <xs:attribute name="matricula" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[0-9]{4}[A-Z]{3}" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+    <!-- Definición del tipo Extras -->
+    <xs:complexType name="ExtrasType">
+        <xs:sequence>
+            <xs:element name="extra" minOccurs="0" maxOccurs="5">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="precio" type="xs:decimal" use="required" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
+

@@ -1,0 +1,15 @@
+<!ELEMENT redSocial (usuario+)>
+<!ELEMENT usuario (nombre, email, telefono?, seguidores?, amigos?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT seguidores (#PCDATA)>
+<!ELEMENT amigos (amigo*)>
+<!ELEMENT amigo EMPTY>
+
+
+<!ATTLIST redSocial nombre CDATA #REQUIRED>
+<!ATTLIST usuario id ID #REQUIRED
+                    rol (admin|usuario|invitado) "usuario">
+<!ATTLIST telefono prefijo CDATA #IMPLIED>
+<!ATTLIST amigo ref IDREF #REQUIRED>

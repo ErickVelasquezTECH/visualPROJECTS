@@ -1,0 +1,33 @@
+<!ELEMENT university_library (department+, library_services?)>
+<!ELEMENT department (course+)>
+<!ATTLIST department name CDATA #REQUIRED
+          code CDATA #REQUIRED>
+<!ELEMENT course (course_name, required_textbooks, recommended_readings?)>
+<!ATTLIST course course_id ID #REQUIRED>
+<!ELEMENT course_name (#PCDATA)>
+<!ELEMENT required_textbooks (textbook+)>
+<!ELEMENT textbook (title, authors, edition, publisher, year, library_copies)>
+<!ATTLIST textbook isbn CDATA #REQUIRED
+          format (physical|digital|both) #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT authors (author+)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT edition (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT library_copies EMPTY>
+<!ATTLIST library_copies total CDATA #REQUIRED
+          available CDATA #REQUIRED
+          reserved CDATA #REQUIRED>
+<!ELEMENT recommended_readings (online_resource+)>
+<!ELEMENT online_resource (title, url)>
+<!ATTLIST online_resource access_type (free|subscription|institutional) #REQUIRED>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT library_services (service+)>
+<!ELEMENT service (service_name, available_to, max_items_per_month, fee)>
+<!ATTLIST service service_id ID #REQUIRED>
+<!ELEMENT service_name (#PCDATA)>
+<!ELEMENT available_to (#PCDATA)>
+<!ELEMENT max_items_per_month (#PCDATA)>
+<!ELEMENT fee (#PCDATA)>
+<!ATTLIST fee currency CDATA #REQUIRED>

@@ -1,0 +1,15 @@
+<!ELEMENT catalogo (categoria+)>
+<!ELEMENT categoria (producto+)>
+<!ELEMENT producto (nombre, descripcion?, precio, especificaciones?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT especificaciones (espec*)>
+<!ELEMENT espec (#PCDATA)>
+
+<!ATTLIST catalogo tienda CDATA #REQUIRED>
+<!ATTLIST categoria nombre CDATA #REQUIRED>
+<!ATTLIST producto codigo ID #REQUIRED
+                    stock CDATA #IMPLIED>
+<!ATTLIST precio moneda (EUR|USD|GBP) #REQUIRED>
+<!ATTLIST espec nombre CDATA #REQUIRED>

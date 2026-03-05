@@ -9,13 +9,10 @@
                 <h1>Mis canciones favoritas</h1>
                 <ul>
                     <xsl:for-each select="songs/song">
-                    <xsl:sort select="title" order="descending"/>
+                    <xsl:sort select="year" order="ascending"/>
                     <li>
-                        <xsl:value-of select="title"/>, (
-                        <xsl:value-of select="year"/>) - 
-                        <xsl:value-of select="artist"/>
-                     </li>
-                 
+                        <xsl:value-of select="concat(title,' (', year, ') - ', artist)"/>
+                    </li>
                     </xsl:for-each>
                 </ul>
             </body>

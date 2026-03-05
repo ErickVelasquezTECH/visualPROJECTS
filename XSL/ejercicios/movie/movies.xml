@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="movies-to-html.xsl" type="text/xsl"?>
+<movies>
+    <movie>
+        <title>El laberinto del fauno</title>
+        <director>Guillermo del Toro</director>
+        <year>2006</year>
+        <duration>118</duration>
+        <genre>Fantasy</genre>
+        <country>Spain</country>
+    </movie>
+    <movie>
+        <title>Todo sobre mi madre</title>
+        <director>Pedro Almodóvar</director>
+        <year>1999</year>
+        <duration>101</duration>
+        <genre>Drama</genre>
+        <country>Spain</country>
+    </movie>
+    <movie>
+        <title>El secreto de sus ojos</title>
+        <director>Juan José Campanella</director>
+        <year>2009</year>
+        <duration>129</duration>
+        <genre>Thriller</genre>
+        <country>Argentina</country>
+    </movie>
+    <movie>
+        <title>Relatos salvajes</title>
+        <director>Damián Szifron</director>
+        <year>2014</year>
+        <duration>122</duration>
+        <genre>Comedy</genre>
+        <country>Argentina</country>
+    </movie>
+</movies>
+
+<!-- 
+Requisitos:
+- Generar una tabla HTML con bordes
+- Columnas: Título, Director, Año, Duración, Clasificación
+- Añadir una columna "Clasificación" que muestre:
+    - "Corta" si la duración es menor de 105 minutos
+    - "Media" si la duración está entre 105 y 120 minutos
+    - "Larga" si es mayor de 120 minutos
+- Resaltar en negrita las películas de Argentina
+- Ordenar la tabla por año (de la más nueva a la más antigua)
+-->

@@ -12,7 +12,6 @@
                     <xsl:sort select="year" order="ascending"/>
                     <li>
                         <xsl:value-of select="concat(title,' (', year, ') - ', artist)"/>
-                        
                     </li>
                     </xsl:for-each>
                 </ul>

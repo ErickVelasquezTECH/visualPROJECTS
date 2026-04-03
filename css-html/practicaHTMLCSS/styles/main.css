@@ -176,7 +176,7 @@ footer .end-links a:active{/*Estilo al mantener el click en mis enlaces del foot
     justify-content: center;
     align-items: center;
     margin: 0px 0px 60px 0px;
-    background-image: url(/assets/images/palestina-banner.jpg); /*Introduje una imagen que sera la presentacion de mi index*/
+    background-image: url(../assets/images/palestina-banner.jpg); /*Introduje una imagen que sera la presentacion de mi index*/
     background-position: center;
     background-size: cover;
     height: 50rem;

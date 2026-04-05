@@ -1,0 +1,9 @@
+Crea un objeto JSON que represente una publicación de una red social con la siguiente estructura:
+    - id: número entero (ej: 101)
+    - author: objeto con username y followers (número)
+    - content: texto de la publicación
+    - likes: número entero
+    - comments: array de objetos, cada comentario tiene author (string) y text (string)
+    - tags: array de strings (etiquetas)
+    - is_edited: booleano
+    - published_at: string con formato ISO (ej: "2025-04-04T10:30:00Z")

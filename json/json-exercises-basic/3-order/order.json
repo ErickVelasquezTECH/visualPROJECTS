@@ -1,0 +1,23 @@
+{
+    "order": {
+        "order-id": "ORD-2024-001",
+        "customer": {
+            "name": "Juan Pérez",
+            "email": "juan@example.com"
+        },
+        "items": [
+            {
+                "product": "Teclado mecánico",
+                "quantity": 1,
+                "price": 89.99
+            },
+            {
+                "product": "Ratón inalámbrico",
+                "quantity": 2,
+                "price": 25.50
+            }
+        ],
+        "shipping_address": null,
+        "priority": "high"
+    }
+}

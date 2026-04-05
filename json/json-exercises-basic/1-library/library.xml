@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book>
+        <title>El Quijote</title>
+        <author>Miguel de Cervantes</author>
+        <year>1605</year>
+        <pages>863</pages>
+        <available>true</available>
+    </book>
+    <book>
+        <title>Cien años de soledad</title>
+        <author>Gabriel García Márquez</author>
+        <year>1967</year>
+        <pages>417</pages>
+        <available>false</available>
+    </book>
+</library>

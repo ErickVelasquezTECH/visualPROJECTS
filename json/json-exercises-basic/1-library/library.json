@@ -1,0 +1,20 @@
+{
+    "library": {
+        "book": [
+            {
+                "title": "El Quijote",
+                "author": "Miguel de Cervantes",
+                "year": 1605,
+                "pages": 863,
+                "available": true
+            },
+            {
+                "title": "Cien años de soledad",
+                "author": "Gabriel García Márquez",
+                "year": 1967,
+                "pages": 417,
+                "available": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "redsocial": {
+        "id": 101,
+        "author": {
+            "user": "erick",
+            "followers": 123
+        },
+        "content": "Aprendiendo json",
+        "likes": 19999,
+        "comments": [
+            {
+                "author": "Lopez",
+                "text": "Buenisimo"
+            },
+            {
+                "author": "Aliaga",
+                "text": "Malisimo"
+            }
+        ],
+        "tags": [
+            "Mundo",
+            "Realidad social"
+        ],
+        "is_edited": true,
+        "published_at": "2025-04-04T10:30:00Z"
+    }
+}

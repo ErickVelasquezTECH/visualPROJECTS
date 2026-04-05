@@ -1,0 +1,14 @@
+{
+    "university": {
+        "name": "Universidad Politécnica",
+        "campus": "Madrid",
+        "students": 12500,
+        "departments": [
+            "Informática",
+            "Matemáticas",
+            "Electrónica"
+        ],
+        "rector_name": "Dra. María González",
+        "has_library": true
+    }
+}

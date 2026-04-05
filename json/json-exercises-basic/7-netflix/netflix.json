@@ -1,0 +1,129 @@
+{
+    "platform": "Netflix",
+    "last_updated": "2023-10-27T14:30:00Z",
+    "total_content": 3,
+    "categories": [
+        {
+            "category_name": "Drama",
+            "content": [
+                {
+                    "id": "1D",
+                    "title": "Titanic",
+                    "type": "movie",
+                    "release_year": 2001,
+                    "duration": 120,
+                    "rating": 10,
+                    "genres": [
+                        "Amor",
+                        "Family"
+                    ],
+                    "cast": [
+                        {
+                            "actor": "DiCaprio",
+                            "character": "El amoroso"
+                        },
+                        {
+                            "actor": "Luisa",
+                            "character": "La amorosa"
+                        }
+                    ],
+                    "available_in_4k": true,
+                    "audio_languages": [
+                        "Spanish",
+                        "Ingles"
+                    ],
+                    "subtitles": [
+                        "Spanish",
+                        "Ingles"
+                    ],
+                    "reviews": [
+                        {
+                            "user": "ElLokoMotor3000",
+                            "rating": 10,
+                            "comment": "lokisimo",
+                            "date": "2025-10-27T14:30:00Z"
+                        },
+                        {
+                            "user": "Bruno Mars",
+                            "rating": 5,
+                            "comment": "No salgo yo",
+                            "date": "2025-11-27T14:30:00Z"
+                        }
+                    ]
+                },
+                {
+                    "id": "2D",
+                    "title": "Tsunami",
+                    "type": "movie",
+                    "release_year": 2001,
+                    "duration": 120,
+                    "rating": 10,
+                    "genres": [
+                        "Tragedia",
+                        "Flipao"
+                    ],
+                    "cast": [
+                        {
+                            "actor": "Leopoldo",
+                            "character": "El dictador"
+                        },
+                        {
+                            "actor": "Jesus",
+                            "character": "El salvador"
+                        }
+                    ],
+                    "available_in_4k": false,
+                    "audio_languages": [
+                        "Spanish",
+                        "Ingles"
+                    ],
+                    "subtitles": [
+                        "Spanish",
+                        "Ingles"
+                    ],
+                    "reviews": []
+                }
+            ]
+        },
+        {
+            "category_name": "Terror",
+            "content": [
+                {
+                    "id": "3D",
+                    "title": "Wikipedia de Biologia",
+                    "type": "series",
+                    "release_year": 2001,
+                    "duration": {
+                        "seasons": 3,
+                        "episodes": 10
+                    },
+                    "rating": 6,
+                    "genres": [
+                        "Brutal",
+                        "No family"
+                    ],
+                    "cast": [
+                        {
+                            "actor": "DiCaprio",
+                            "character": "El loco"
+                        },
+                        {
+                            "actor": "RosaMal",
+                            "character": "Malevola"
+                        }
+                    ],
+                    "available_in_4k": true,
+                    "audio_languages": [
+                        "Spanish",
+                        "Ingles"
+                    ],
+                    "subtitles": [
+                        "Spanish",
+                        "Ingles"
+                    ],
+                    "reviews": []
+                }
+            ]
+        }
+    ]
+}

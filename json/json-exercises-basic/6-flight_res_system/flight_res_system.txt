@@ -1,0 +1,17 @@
+Enunciado: Crea un objeto JSON que represente un sistema de reservas de vuelos con la siguiente estructura:
+    - flight_number: string (ej: "IB2024")
+    - airline: objeto con name (string) y code (string de 2 letras)
+    - route: objeto con:
+        - origin: objeto con city, airport_code (string de 3 letras) y gate (string o null si aún no asignada)
+        - destination: mismo esquema que origin
+    - departure_time: string con formato ISO
+    - arrival_time: string con formato ISO
+    - passengers: array de objetos, cada pasajero tiene:
+        - passenger_id: número
+        - full_name: string
+        - seat: string (ej: "12A") o null si no asignado
+        - meal_preference: string que puede ser "vegetarian", "vegan", "kosher", "halal" o "regular"
+        - checked_bags: número entero
+        - frequent_flyer: objeto con membership (boolean) y points (número, solo si membership es true, si no, null)
+    - status: string que solo puede ser "on time", "delayed", "boarding", "cancelled" (usa una validación mental)
+    - crew: objeto con captain (string), co_pilot (string), attendants (array de strings)

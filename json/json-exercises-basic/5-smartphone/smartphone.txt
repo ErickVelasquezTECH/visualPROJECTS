@@ -1,0 +1,9 @@
+Crea un objeto JSON que represente un smartphone con:
+    - brand: string (marca)
+    - model: string
+    - release_year: número entero
+    - price: número decimal
+    - in_stock: booleano
+    - specifications: objeto con ram (string), storage (string), screen_size (número decimal), battery (número entero en mAh)
+    - colors_available: array de strings
+    - accessories_included: array de strings (puede estar vacío)

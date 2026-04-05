@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<university>
+    <name>Universidad Politécnica</name>
+    <campus>Madrid</campus>
+    <students>12500</students>
+    <departments>
+        <department>Informática</department>
+        <department>Matemáticas</department>
+        <department>Electrónica</department>
+    </departments>
+    <rector_name>Dra. María González</rector_name>
+    <has_library>true</has_library>
+</university>

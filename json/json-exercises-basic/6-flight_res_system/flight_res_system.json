@@ -1,0 +1,54 @@
+{
+    "flight_number": "IB2024",
+    "airline": {
+        "name": "AirlineExpress",
+        "code": "ES"
+    },
+    "route": {
+        "origin": {
+            "city": "Madrid",
+            "airport_code": "MS1",
+            "gate": null
+        },
+        "destination": {
+            "city": "Barcelona",
+            "airport_code": "BS1",
+            "gate": null
+        }
+    },
+    "departure_time": "2023-10-27T14:30:00Z",
+    "arrival_time": "2023-10-27T20:30:00Z",
+    "passengers": [
+        {
+            "passenger_id": 1,
+            "full_name": "Erick Velasquez",
+            "seat": "12A",
+            "meal_preference": "regular",
+            "checked_bags": 10,
+            "frequent_flyer": {
+                "membership": true,
+                "points": 1000
+            }
+        },
+        {
+            "passenger_id": 2,
+            "full_name": "Mary Iporre",
+            "seat": null,
+            "meal_preference": "regular",
+            "checked_bags": 10,
+            "frequent_flyer": {
+                "membership": false,
+                "points": null
+            }
+        }
+    ],
+    "status": "delayed",
+    "crew": {
+        "captain": "Caribe Cap",
+        "co_pilot": "Copilot",
+        "attendants": [
+            "Palmis",
+            "Jose"
+        ]
+    }
+}

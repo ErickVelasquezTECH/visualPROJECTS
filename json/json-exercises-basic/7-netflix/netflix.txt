@@ -1,0 +1,33 @@
+Enunciado: Crea un objeto JSON que represente el catálogo completo de una plataforma de streaming (como Netflix) con las siguientes características:
+Estructura raíz:
+    - platform: string (nombre de la plataforma)
+    - last_updated: string ISO
+    - total_content: número (que se calcule automáticamente en la mente, no en JSON, pero pon el número correcto según lo que crees)
+    - categories: array de objetos, cada categoría tiene:
+        - category_name: string
+        - content: array de objetos (películas o series)
+Dentro de content (cada ítem puede ser película o serie):
+    - id: string único
+    - title: string
+    - type: string (solo "movie" o "series")
+    - release_year: número
+    - duration:
+        - Si es movie: número (minutos)
+        - Si es series: objeto con seasons (número) y episodes (número total)
+    - rating: número decimal (0 a 10)
+    - genres: array de strings (mínimo 2, máximo 4)
+    - cast: array de objetos con actor (string) y character (string)
+    - available_in_4k: boolean
+    - audio_languages: array de strings
+    - subtitles: array de strings
+    - reviews: array de objetos (puede estar vacío), cada review tiene:
+        - user: string
+        - rating: número (0 a 10)
+        - comment: string o null
+        - date: string ISO
+Requisitos extra:
+    - Debe haber al menos 2 categorías (ej: "Acción", "Comedia")
+    - En una categoría debe haber 2 películas
+    - En la otra categoría debe haber 1 serie (con sus temporadas y episodios)
+    - Al menos una película debe tener 2 reviews
+    - Al menos un miembro del cast debe aparecer en dos contenidos diferentes (mismo actor, diferentes películas/series)

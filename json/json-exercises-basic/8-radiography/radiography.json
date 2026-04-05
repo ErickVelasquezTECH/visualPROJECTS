@@ -1,0 +1,122 @@
+{
+    "medical_record": {
+        "xmlns:ns": "http://hospital.org/ns",
+        "patient_info": {
+            "id": "12345678A",
+            "type": "NIF",
+            "names": {
+                "first": "Ana",
+                "last": [
+                    "García",
+                    "Fernández"
+                ]
+            },
+            "birth_date": "1985-07-23T00:00:00Z",
+            "contacts": {
+                "email": "ana.garcia@email.com",
+                "phone": [
+                    {
+                        "primary": true,
+                        "value": "+34 600 123 456"
+                    },
+                    {
+                        "primary": false,
+                        "value": "+34 912 345 678"
+                    }
+                ]
+            }
+        },
+        "medical_history":{
+            "conditions":[
+                {   
+                    "diagnosed": "2015-03-10T00:00:00Z",
+                    "name": "Hypertension",
+                    "status": "controlled",
+                    "medications":[
+                        {
+                            "dosage": "10mg",
+                            "frequency": "daily",
+                            "name":"Enalapril",
+                            "start_date": "2015-03-15T00:00:00Z"
+                        }
+                    ]
+                },
+                {
+                    "diagnosed": "2020-11-02T00:00:00Z",
+                    "resolved": "2021-01-20T00:00:00Z",
+                    "name": "Fracture",
+                    "location": "Radius, left arm",
+                    "status": "resolved",
+                    "treatment": "Cast immobilization for 8 weeks"
+                }
+            ]
+        },
+        "recent_visits":{
+            "visits":[
+                {
+                    "date": "2024-01-15T00:00:00Z",
+                    "doctor": "Dr. Martínez",
+                    "specialty": "Cardiology",
+                    "notes":"Blood pressure controlled. Continue current medication.",
+                    "prescriptions":[
+                        {
+                            "refill": 3,
+                            "medication": "Enalapril",
+                            "dosage": "10mg daily"
+                        }
+                    ]
+                },
+                {
+                    "date":"2024-06-20T00:00:00Z",
+                    "doctor": "Dra. López",
+                    "specialty": "Traumatology",
+                    "notes": "Post-fracture follow-up. Full mobility recovered.",
+                    "prescriptions":[]
+                }
+            ]
+        },
+        "allergies":[
+            {
+                "severity": "mild",
+                "allergen": "Pollen",
+                "reaction": "Hay fever"
+            }
+        ],
+        "vital_signs":{
+            "history": true,
+            "measurements":[
+                {
+                    "date": "2024-01-15T00:00:00Z",
+                    "blood_pressure":{
+                        "systolic":120,
+                        "diastolic": 80
+                    },
+                    "heart_rate":{
+                        "unit": "bpm",
+                        "value": 72
+                    },
+                    "weight":{
+                        "unit": "kg",
+                        "value": 65.5
+                    }
+                },
+                {
+                    "date": "2024-06-20T00:00:00Z",
+                    "blood_pressure":{
+                        "systolic":118,
+                        "diastolic": 78
+                    },
+                    "heart_rate":{
+                        "unit": "bpm",
+                        "value": 70
+                    },
+                    "weight":{
+                        "unit": "kg",
+                        "value": 66.0
+                    }
+                }
+            ]
+        },
+        "observations":"Patient is compliant with treatment. Next check-up in 6 months."
+    }
+}

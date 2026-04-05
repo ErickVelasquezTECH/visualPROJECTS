@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medical_record xmlns:ns="http://hospital.org/ns">
+    <patient_info>
+        <id type="NIF">12345678A</id>
+        <name>
+            <first>Ana</first>
+            <last>García</last>
+            <last>Fernández</last>
+        </name>
+        <birth_date>1985-07-23</birth_date>
+        <contact>
+            <email>ana.garcia@email.com</email>
+            <phone primary="true">+34 600 123 456</phone>
+            <phone primary="false">+34 912 345 678</phone>
+        </contact>
+    </patient_info>
+    
+    <medical_history>
+        <condition diagnosed="2015-03-10">
+            <name>Hypertension</name>
+            <status>controlled</status>
+            <medications>
+                <medication dosage="10mg" frequency="daily">
+                    <name>Enalapril</name>
+                    <start_date>2015-03-15</start_date>
+                </medication>
+            </medications>
+        </condition>
+        
+        <condition diagnosed="2020-11-02" resolved="2021-01-20">
+            <name>Fracture</name>
+            <location>Radius, left arm</location>
+            <status>resolved</status>
+            <treatment>Cast immobilization for 8 weeks</treatment>
+        </condition>
+    </medical_history>
+    
+    <recent_visits>
+        <visit date="2024-01-15">
+            <doctor>Dr. Martínez</doctor>
+            <specialty>Cardiology</specialty>
+            <notes>Blood pressure controlled. Continue current medication.</notes>
+            <prescriptions>
+                <prescription refill="3">
+                    <medication>Enalapril</medication>
+                    <dosage>10mg daily</dosage>
+                </prescription>
+            </prescriptions>
+        </visit>
+        
+        <visit date="2024-06-20">
+            <doctor>Dra. López</doctor>
+            <specialty>Traumatology</specialty>
+            <notes>Post-fracture follow-up. Full mobility recovered.</notes>
+            <prescriptions/>
+        </visit>
+    </recent_visits>
+    
+    <allergies>
+        <allergy severity="mild">
+            <allergen>Pollen</allergen>
+            <reaction>Hay fever</reaction>
+        </allergy>
+    </allergies>
+    
+    <vital_signs history="true">
+        <measurement date="2024-01-15">
+            <blood_pressure systolic="120" diastolic="80"/>
+            <heart_rate unit="bpm">72</heart_rate>
+            <weight unit="kg">65.5</weight>
+        </measurement>
+        <measurement date="2024-06-20">
+            <blood_pressure systolic="118" diastolic="78"/>
+            <heart_rate unit="bpm">70</heart_rate>
+            <weight unit="kg">66.0</weight>
+        </measurement>
+    </vital_signs>
+    
+    <observations>Patient is compliant with treatment. Next check-up in 6 months.</observations>
+</medical_record>

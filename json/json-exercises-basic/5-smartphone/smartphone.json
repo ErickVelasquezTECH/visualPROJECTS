@@ -1,0 +1,20 @@
+{
+    "smartphone": {
+        "brand": "Motorola",
+        "model": "7X1",
+        "release_year": 2001,
+        "price": 100.30,
+        "in_stock": true,
+        "specifications": {
+            "ram": "18GB",
+            "storage": "128GB",
+            "screen_size": 18.2,
+            "battery": 5000
+        },
+        "colors_available": [
+            "red",
+            "blue"
+        ],
+        "accessories_includeds": []
+    }
+}   

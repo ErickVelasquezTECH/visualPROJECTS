@@ -33,13 +33,13 @@
                                 "moneda": "</xsl:text>
                                 <xsl:value-of select="precio/@moneda"/>
                                 <xsl:text>",
-                                "value": "</xsl:text>
+                                "value": </xsl:text>
                                 <xsl:value-of select="precio"/>
-                                <xsl:text>"
+                                <xsl:text>
                             },
-                            "stock": "</xsl:text>
+                            "stock": </xsl:text>
                             <xsl:value-of select="stock"/>
-                            <xsl:text>",
+                            <xsl:text>,
                             "especificaciones":{&#xa;</xsl:text>
                                 <xsl:for-each select="especificaciones/*">
                                 <xsl:text>"</xsl:text>

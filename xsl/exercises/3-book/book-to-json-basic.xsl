@@ -9,13 +9,10 @@
             "year": <xsl:value-of select="book/year"/>
             "pages": <xsl:value-of select="book/pages"/>
             "description": "<xsl:value-of select="book/description"/>",
-            "links":{
-                <xsl:for-each select="book/links/link">
-                "link": "<xsl:value-of select="."/>"
-                </xsl:for-each>
+            "links":{<xsl:for-each select="book/links/link">
+                "link": "<xsl:value-of select="."/>"</xsl:for-each>
             }
         }
     }
-    
     </xsl:template>
 </xsl:stylesheet>

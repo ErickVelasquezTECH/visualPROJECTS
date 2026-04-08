@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="catalogo-to-json-medium.xsl" type="text/xsl"?>
+<catalogo tienda="TechStore">
+    <categoria id="electronica" nombre="Electrónica">
+        <producto id="P001">
+            <nombre>Smartphone XYZ</nombre>
+            <marca>TechBrand</marca>
+            <precio moneda="EUR">399.99</precio>
+            <stock>15</stock>
+            <especificaciones>
+                <pantalla>6.5 pulgadas</pantalla>
+                <ram>8GB</ram>
+                <almacenamiento>128GB</almacenamiento>
+            </especificaciones>
+            <etiquetas>
+                <etiqueta>nuevo</etiqueta>
+                <etiqueta>oferta</etiqueta>
+            </etiquetas>
+        </producto>
+        <producto id="P002">
+            <nombre>Auriculares Bluetooth</nombre>
+            <marca>SoundWave</marca>
+            <precio moneda="EUR">89.99</precio>
+            <stock>32</stock>
+            <especificaciones>
+                <tipo>Diadema</tipo>
+                <autonomia>20h</autonomia>
+            </especificaciones>
+            <etiquetas>
+                <etiqueta>más vendido</etiqueta>
+            </etiquetas>
+        </producto>
+    </categoria>
+    <categoria id="hogar" nombre="Hogar">
+        <producto id="P003">
+            <nombre>Robot aspirador</nombre>
+            <marca>CleanMaster</marca>
+            <precio moneda="EUR">249.50</precio>
+            <stock>8</stock>
+            <especificaciones>
+                <potencia>150W</potencia>
+                <autonomia>120min</autonomia>
+            </especificaciones>
+        </producto>
+    </categoria>
+</catalogo>
+
+<!-- 
+{
+  "tienda": "TechStore",
+  "categorias": [
+    {
+      "id": "electronica",
+      "nombre": "Electrónica",
+      "productos": [...]
+    }
+  ]
+}
+Genera un JSON válido con estructura:
+Cada producto debe incluir: id, nombre, marca, precio, stock y etiquetas (como array)
+Filtra solo los productos con stock > 10
+Convierte las especificaciones a un objeto clave-valor
+Añade un campo "precio_con_iva" calculado (21% de IVA)
+-->

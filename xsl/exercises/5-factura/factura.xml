@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="factura-to-html.xsl"?>
+<factura numero="F-2024-001" fecha="2024-03-15">
+    <cliente>
+        <nombre>María García López</nombre>
+        <nif>12345678A</nif>
+        <direccion>Calle Mayor 23, Madrid</direccion>
+    </cliente>
+    <lineas>
+        <linea>
+            <producto>Portátil ASUS</producto>
+            <cantidad>1</cantidad>
+            <precio_unitario>650.00</precio_unitario>
+        </linea>
+        <linea>
+            <producto>Ratón inalámbrico</producto>
+            <cantidad>2</cantidad>
+            <precio_unitario>25.50</precio_unitario>
+        </linea>
+        <linea>
+            <producto>Funda para portátil</producto>
+            <cantidad>1</cantidad>
+            <precio_unitario>35.90</precio_unitario>
+        </linea>
+    </lineas>
+    <iva>21</iva>
+</factura>
+
+<!--
+*** factura-to-html ***
+Genera una tabla HTML con todas las líneas de la factura (producto, cantidad, precio unitario, total por línea)
+Calcula el subtotal, el IVA y el total final
+Muestra los datos del cliente en la cabecera
+Añade estilo CSS básico (bordes, colores alternos en filas)
+Formatea los precios con 2 decimales y símbolo €-->

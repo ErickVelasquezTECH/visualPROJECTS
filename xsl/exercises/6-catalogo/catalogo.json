@@ -1,0 +1,52 @@
+{
+    "tienda": "TechStore",
+    "categorias": [
+        {
+            "id": "electronica",
+            "nombre": "Electrónica",
+            "productos": [
+                {
+                    "id": "P001",
+                    "nombre": "Smartphone XYZ",
+                    "marca": "TechBrand",
+                    "precio": {
+                        "moneda": "EUR",
+                        "value": "399.99"
+                    },
+                    "stock": "15",
+                    "especificaciones": {
+                        "pantalla": "6.5 pulgadas",
+                        "ram": "8GB",
+                        "almacenamiento": "128GB"
+                    },
+                    "etiquetas": [
+                        "nuevo",
+                        "oferta"
+                    ]
+                },
+                {
+                    "id": "P002",
+                    "nombre": "Auriculares Bluetooth",
+                    "marca": "SoundWave",
+                    "precio": {
+                        "moneda": "EUR",
+                        "value": "89.99"
+                    },
+                    "stock": "32",
+                    "especificaciones": {
+                        "tipo": "Diadema",
+                        "autonomia": "20h"
+                    },
+                    "etiquetas": [
+                        "más vendido"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "hogar",
+            "nombre": "Hogar",
+            "productos": []
+        }
+    ]
+}

@@ -19,8 +19,10 @@
                 <p>
                     <xsl:value-of select="/book/description"/>
                 </p>
-                <p>Link:
-                     <xsl:value-of select="/book/links/link"/>
+                <p><xsl:for-each select="book/links/link">
+                    Link:
+                     <xsl:value-of select="."/><br/>
+                    </xsl:for-each>
                 </p>
             </body>
           </html>

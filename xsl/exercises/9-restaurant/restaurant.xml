@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="restaurant-to-json.xsl" type="text/xsl"?>
+<menu>
+    <dish category="starter">
+        <name>Ensalada César</name>
+        <price>8.50</price>
+        <vegan>false</vegan>
+    </dish>
+    <dish category="main">
+        <name>Paella</name>
+        <price>15.90</price>
+        <vegan>false</vegan>
+    </dish>
+    <dish category="main">
+        <name>Berenjenas gratinadas</name>
+        <price>12.00</price>
+        <vegan>true</vegan>
+    </dish>
+    <dish category="dessert">
+        <name>Tiramisú</name>
+        <price>5.50</price>
+        <vegan>false</vegan>
+    </dish>
+    <dish category="starter">
+        <name>Hummus</name>
+        <price>7.00</price>
+        <vegan>true</vegan>
+    </dish>
+</menu>
+
+<!--
+=== HTML ===
+- Título "Carta del Restaurante"
+- Tabla con columnas: Plato, Categoría, Precio, Vegano
+- Vegano: mostrar "Sí" o "No" (usar xsl:choose)
+- Resaltar en negrita los platos veganos
+- Ordenar la tabla por precio ascendente
+- Añadir al final el precio medio de los platos (usar sum() div count())
+- CSS: bordes en la tabla, celdas con padding, y filas de color alterno (gris claro y blanco)
+
+=== CSV ===
+- Cabeceras: Plato,Categoria,Precio,Vegano
+- Vegano: "Si" o "No"
+- Filtrar solo platos con precio < 20€
+
+=== JSON ===
+- { "restaurante": { "platos": [ {"nombre": "...", "categoria": "...", "precio": ..., "vegano": true/false} ] } }
+- Incluir campo "precio_medio" calculado
+-->

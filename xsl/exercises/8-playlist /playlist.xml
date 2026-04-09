@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="playlist-to-json.xsl" type="text/xsl"?> 
+<playlist>
+    <song>
+        <title>Blinding Lights</title>
+        <artist>The Weeknd</artist>
+        <duration>200</duration>
+        <genre>Pop</genre>
+    </song>
+    <song>
+        <title>Shape of You</title>
+        <artist>Ed Sheeran</artist>
+        <duration>233</duration>
+        <genre>Pop</genre>
+    </song>
+    <song>
+        <title>Bohemian Rhapsody</title>
+        <artist>Queen</artist>
+        <duration>354</duration>
+        <genre>Rock</genre>
+    </song>
+    <song>
+        <title>Lose Yourself</title>
+        <artist>Eminem</artist>
+        <duration>326</duration>
+        <genre>Hip Hop</genre>
+    </song>
+</playlist>
+
+<!--
+=== HTML ===
+- Título "Mi Playlist Favorita"
+- Lista ordenada (<ol>) con cada canción mostrando: "Título - Artista (duración: X segundos)"
+- Usar concat() para formatear el texto
+- Añadir después de la lista: "Total de canciones: X" (usar count())
+- Calcular y mostrar la duración total en segundos (usar sum())
+- CSS: poner fondo de color negro a la página, texto blanco, y la lista con fondo gris oscuro y bordes redondeados 
+=== CSV ===
+- Cabeceras: Titulo,Artista,Duracion,Genero
+- Mostrar todas las canciones
+
+=== JSON ===
+- { "playlist": { "total_canciones": X, "canciones": [ {"titulo": "...", "artista": "...", "duracion": ...} ] } }
+-->

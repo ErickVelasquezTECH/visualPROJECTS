@@ -1,0 +1,37 @@
+{
+    "restaurante": {
+        "platos": [
+            {
+                "nombre": "Ensalada César",
+                "categoria": "starter",
+                "precio": 8.50,
+                "vegano": false
+            },
+            {
+                "nombre": "Paella",
+                "categoria": "main",
+                "precio": 15.90,
+                "vegano": false
+            },
+            {
+                "nombre": "Berenjenas gratinadas",
+                "categoria": "main",
+                "precio": 12.00,
+                "vegano": true
+            },
+            {
+                "nombre": "Tiramisú",
+                "categoria": "dessert",
+                "precio": 5.50,
+                "vegano": false
+            },
+            {
+                "nombre": "Hummus",
+                "categoria": "starter",
+                "precio": 7.00,
+                "vegano": true
+            }
+        ],
+        "precio_medio": 9.78
+    }
+}

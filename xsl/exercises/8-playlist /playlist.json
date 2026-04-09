@@ -1,0 +1,31 @@
+{
+    "playlist": {
+        "total_canciones": 4,
+        "canciones": [
+            {
+                "titulo": "Blinding Lights",
+                "artista": "The Weeknd",
+                "duracion": 200,
+                "genero": "Pop"
+            },
+            {
+                "titulo": "Shape of You",
+                "artista": "Ed Sheeran",
+                "duracion": 233,
+                "genero": "Pop"
+            },
+            {
+                "titulo": "Bohemian Rhapsody",
+                "artista": "Queen",
+                "duracion": 354,
+                "genero": "Rock"
+            },
+            {
+                "titulo": "Lose Yourself",
+                "artista": "Eminem",
+                "duracion": 326,
+                "genero": "Hip Hop"
+            }
+        ]
+    }
+}

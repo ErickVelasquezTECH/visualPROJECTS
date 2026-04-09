@@ -17,12 +17,12 @@
         <xsl:value-of select="substring(fecha_publicacion, 1, 4)"/>
         <xsl:text>,</xsl:text>
         <xsl:value-of select="precio"/>
-        <xsl:text>,</xsl:text>
+        <xsl:text>,"</xsl:text>
         <xsl:for-each select="generos/genero">
             <xsl:value-of select="."/>
             <xsl:if test="position() != last()"><xsl:text>;</xsl:text></xsl:if>
         </xsl:for-each>
-        <xsl:text>,</xsl:text>
+        <xsl:text>",</xsl:text>
         <xsl:value-of select="disponible"/>
         <xsl:text>&#xa;</xsl:text>
         </xsl:if>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="biblioteca-to-html.xsl" type="text/xsl"?>
+<biblioteca>
+    <libro isbn="978-3-16-148410-0">
+        <titulo>El Quijote</titulo>
+        <autor>
+            <nombre>Miguel de</nombre>
+            <apellido>Cervantes</apellido>
+        </autor>
+        <editorial>Alfaguara</editorial>
+        <fecha_publicacion>1605-01-16</fecha_publicacion>
+        <precio>19.95</precio>
+        <generos>
+            <genero>Novela</genero>
+            <genero>Clásico</genero>
+        </generos>
+        <disponible>true</disponible>
+    </libro>
+    <libro isbn="978-0-14-143951-8">
+        <titulo>1984</titulo>
+        <autor>
+            <nombre>George</nombre>
+            <apellido>Orwell</apellido>
+        </autor>
+        <editorial>Debolsillo</editorial>
+        <fecha_publicacion>1949-06-08</fecha_publicacion>
+        <precio>14.50</precio>
+        <generos>
+            <genero>Ciencia Ficción</genero>
+            <genero>Distopía</genero>
+        </generos>
+        <disponible>true</disponible>
+    </libro>
+    <libro isbn="978-0-06-112008-4">
+        <titulo>El Principito</titulo>
+        <autor>
+            <nombre>Antoine de</nombre>
+            <apellido>Saint-Exupéry</apellido>
+        </autor>
+        <editorial>Salamandra</editorial>
+        <fecha_publicacion>1943-04-06</fecha_publicacion>
+        <precio>9.95</precio>
+        <generos>
+            <genero>Infantil</genero>
+            <genero>Fábula</genero>
+        </generos>
+        <disponible>false</disponible>
+    </libro>
+</biblioteca>
+
+<!-- 
+*** biblioteca-to-csv ***
+Genera un archivo CSV con cabeceras: ISBN,Título,Autor,Editorial,Año,Precio,Géneros,Disponible
+El autor debe ser "Nombre Apellido" concatenado
+El año debe extraerse de la fecha (solo el año)
+Los géneros deben aparecer separados por punto y coma (;)
+Filtra solo los libros disponibles (disponible = true)
+Ordena los libros por precio descendente
+
+*** biblioteca-to-html ***
+Muestra la información en una tabla con las siguientes 5 columnas:
+- Título
+- ISBN
+- Autor (nombre y apellidos)
+- Precio
+- Disponible (que salga "sí" o "no").
+Pon una última fila (tfoot) en la que se vea la suma del precio de todos los libros, y el precio medio.
+Pon un estilo a la celda del primer libro para que salga con un gradiente de fondo, y al título del último libro con otra clase y un color de fondo rojo.
+-->

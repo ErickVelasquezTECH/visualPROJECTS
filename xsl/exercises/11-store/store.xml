@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <?xml-stylesheet href="store-to-html.xsl" type="text/xsl"?> -->
+<?xml-stylesheet href="store-to-html.xsl" type="text/xsl"?> 
 <store>
     <section name="Electronics">
         <item>
@@ -34,6 +34,7 @@
             <price>89.99</price>
             <rating>4.7</rating>
             <tags>
+                
                 <tag>new</tag>
                 <tag>limited</tag>
             </tags>

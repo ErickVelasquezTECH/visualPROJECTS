@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet href="store-to-html.xsl" type="text/xsl"?> -->
+<store>
+    <section name="Electronics">
+        <item>
+            <name>Smartphone</name>
+            <price>599.99</price>
+            <rating>4.5</rating>
+            <tags>
+                <tag>new</tag>
+                <tag>top-seller</tag>
+            </tags>
+        </item>
+        <item>
+            <name>Tablet</name>
+            <price>349.99</price>
+            <rating>4.2</rating>
+            <tags>
+                <tag>sale</tag>
+            </tags>
+        </item>
+    </section>
+    <section name="Clothing">
+        <item>
+            <name>Jeans</name>
+            <price>49.99</price>
+            <rating>4.0</rating>
+            <tags>
+                <tag>basic</tag>
+            </tags>
+        </item>
+        <item>
+            <name>Jacket</name>
+            <price>89.99</price>
+            <rating>4.7</rating>
+            <tags>
+                <tag>new</tag>
+                <tag>limited</tag>
+            </tags>
+        </item>
+    </section>
+</store>
+
+<!--
+=== HTML ===
+- Título "Tienda Online"
+- Tabla con columnas: Producto, Sección, Precio, Rating, ¿Oferta?
+- ¿Oferta?: "Sí" si contiene tag "sale" (usar contains() y xsl:choose)
+- Mostrar rating con 1 decimal (format-number)
+- Añadir fila de total: "Precio medio de todos los productos: X" (usar sum() div count())
+- Usar position() para mostrar el número de orden de cada producto
+- CSS: los productos con oferta (¿Oferta? = Sí) que aparezcan con texto de color rojo y en negrita. Añadir sombra a la tabla.
+
+=== CSV ===
+- Cabeceras: Producto,Seccion,Precio,Rating,TieneOferta
+- TieneOferta: "Si" o "No" según contenga tag "sale"
+- Ordenar por precio descendente
+
+=== JSON ===
+- { "tienda": { "productos": [ {"nombre": "...", "seccion": "...", "precio": ..., "rating": ..., "etiquetas": ["tag1","tag2"]} ] } }
+- Las etiquetas deben ser un array
+-->

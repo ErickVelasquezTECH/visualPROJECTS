@@ -1,0 +1,38 @@
+{
+    "biblioteca": {
+        "libros": [
+            {
+                "id": "B001",
+                "titulo": "Cien años de soledad",
+                "autor": "Gabriel García Márquez",
+                "year": 1967,
+                "paginas": 450,
+                "disponible": true
+            },
+            {
+                "id": "B002",
+                "titulo": "The Great Gatsby",
+                "autor": "F. Scott Fitzgerald",
+                "year": 1925,
+                "paginas": 328,
+                "disponible": true
+            },
+            {
+                "id": "B003",
+                "titulo": "El amor en los tiempos del cólera",
+                "autor": "Gabriel García Márquez",
+                "year": 1985,
+                "paginas": 200,
+                "disponible": false
+            },
+            {
+                "id": "B004",
+                "titulo": "El extranjero",
+                "autor": "Albert Camus",
+                "year": 1942,
+                "paginas": 500,
+                "disponible": true
+            }
+        ]
+    }
+}

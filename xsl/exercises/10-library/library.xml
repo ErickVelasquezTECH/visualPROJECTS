@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="library-to-json.xsl" type="text/xsl"?> 
+<library>
+    <book id="B001" language="es" pages="450">
+        <title>Cien años de soledad</title>
+        <author>Gabriel García Márquez</author>
+        <year>1967</year>
+        <available>true</available>
+    </book>
+    <book id="B002" language="en" pages="328">
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <year>1925</year>
+        <available>true</available>
+    </book>
+    <book id="B003" language="es" pages="200">
+        <title>El amor en los tiempos del cólera</title>
+        <author>Gabriel García Márquez</author>
+        <year>1985</year>
+        <available>false</available>
+    </book>
+    <book id="B004" language="fr" pages="500">
+        <title>El extranjero</title>
+        <author>Albert Camus</author>
+        <year>1942</year>
+        <available>true</available>
+    </book>
+</library>
+
+<!--
+=== HTML ===
+- Título "Biblioteca"
+- Tabla con columnas: Título, Autor, Año, Páginas, Disponible, Idioma
+- Usar @language (atributo) para mostrar el idioma
+- Disponible: mostrar "En préstamo" si available=false, "Disponible" si true
+- Usar xsl:if para mostrar "(clásico)" junto al título si year < 1950
+- Filtrar con predicado: solo libros con páginas > 250 (en el select de for-each)
+- CSS: el título de la tabla con fondo azul y texto blanco. La primera fila (primer libro) con fondo amarillo claro.
+
+=== CSV ===
+- Cabeceras: ID,Titulo,Autor,Year,Paginas,Idioma,Disponible
+- Disponible: "Si" o "No"
+- Mostrar solo libros de idioma "es" (español)
+
+=== JSON ===
+- { "biblioteca": { "libros": [ {"id": "...", "titulo": "...", "autor": "...", "year": ..., "paginas": @pages, "disponible": boolean} ] } }
+- Usar el atributo pages del nodo book como número de páginas
+-->
